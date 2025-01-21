@@ -1,0 +1,183 @@
+2025-01-17 17:25:45,133 - DEBUG - Token status requested
+2025-01-17 17:25:47,827 - DEBUG - Token status requested
+2025-01-17 17:25:56,517 - DEBUG - Token status requested
+2025-01-17 17:26:01,680 - INFO - New chat request received
+2025-01-17 17:26:01,680 - DEBUG - Message length: 3 characters
+2025-01-17 17:26:01,680 - INFO - Starting chat request processing
+2025-01-17 17:26:01,680 - DEBUG - Input text length: 3 characters
+2025-01-17 17:26:01,681 - DEBUG - Sending API request
+2025-01-17 17:26:05,425 - INFO - Token usage - Prompt: 29, Completion: 64, Total: 0
+2025-01-17 17:26:05,425 - ERROR - Error processing request: local variable 'remaining_tokens' referenced before assignment
+2025-01-17 17:26:05,425 - ERROR - Error processing chat message: local variable 'remaining_tokens' referenced before assignment
+2025-01-17 17:26:05,429 - DEBUG - Token status requested
+2025-01-17 17:26:06,515 - DEBUG - Token status requested
+2025-01-17 17:26:13,585 - INFO - New chat request received
+2025-01-17 17:26:13,586 - DEBUG - Message length: 1 characters
+2025-01-17 17:26:13,586 - INFO - Starting chat request processing
+2025-01-17 17:26:13,586 - DEBUG - Input text length: 1 characters
+2025-01-17 17:26:13,586 - DEBUG - Sending API request
+2025-01-17 17:26:16,510 - DEBUG - Token status requested
+2025-01-17 17:26:16,952 - INFO - Token usage - Prompt: 27, Completion: 29, Total: 0
+2025-01-17 17:26:16,952 - ERROR - Error processing request: local variable 'remaining_tokens' referenced before assignment
+2025-01-17 17:26:16,952 - ERROR - Error processing chat message: local variable 'remaining_tokens' referenced before assignment
+2025-01-17 17:26:16,956 - DEBUG - Token status requested
+2025-01-17 17:26:27,139 - DEBUG - Token status requested
+2025-01-17 17:26:37,132 - DEBUG - Token status requested
+2025-01-17 17:26:47,124 - DEBUG - Token status requested
+2025-01-17 17:27:23,704 - DEBUG - Token status requested
+2025-01-17 17:27:26,883 - INFO - New chat request received
+2025-01-17 17:27:26,883 - DEBUG - Message length: 2 characters
+2025-01-17 17:27:26,884 - INFO - Starting chat request processing
+2025-01-17 17:27:26,884 - DEBUG - Input text length: 2 characters
+2025-01-17 17:27:26,884 - DEBUG - Sending API request
+2025-01-17 17:27:30,698 - INFO - Token usage - Prompt: 28, Completion: 56, Total: 0
+2025-01-17 17:27:30,698 - WARNING - No token info from API, estimated usage: 0 tokens
+2025-01-17 17:27:30,698 - INFO - Chat history updated
+2025-01-17 17:27:30,698 - INFO - Chat response generated
+2025-01-17 17:27:30,698 - DEBUG - Response length: 51 characters
+2025-01-17 17:27:30,704 - DEBUG - Token status requested
+2025-01-17 17:27:33,688 - DEBUG - Token status requested
+2025-01-17 17:27:43,691 - DEBUG - Token status requested
+2025-01-17 17:27:53,696 - DEBUG - Token status requested
+2025-01-17 17:28:03,700 - DEBUG - Token status requested
+2025-01-17 17:28:14,138 - DEBUG - Token status requested
+2025-01-17 17:28:24,137 - DEBUG - Token status requested
+2025-01-17 17:28:34,133 - DEBUG - Token status requested
+2025-01-17 17:28:44,134 - DEBUG - Token status requested
+2025-01-17 17:28:54,133 - DEBUG - Token status requested
+2025-01-17 17:29:04,137 - DEBUG - Token status requested
+2025-01-17 17:30:25,136 - INFO - Checking token status
+2025-01-17 17:30:56,135 - INFO - Checking token status
+2025-01-17 17:31:55,124 - INFO - Checking token status
+2025-01-17 17:32:25,128 - INFO - Checking token status
+2025-01-17 17:32:56,129 - INFO - Checking token status
+2025-01-17 17:33:56,128 - INFO - Checking token status
+2025-01-17 17:35:49,528 - INFO - New chat request received
+2025-01-17 17:35:49,528 - INFO - Starting chat request processing
+2025-01-17 17:35:53,517 - INFO - Token usage - Prompt: 28, Completion: 64, Total: 0
+2025-01-17 17:35:53,517 - WARNING - No token info from API, estimated usage: 0 tokens
+2025-01-17 17:35:53,517 - INFO - Chat history updated
+2025-01-17 17:35:53,517 - INFO - Chat response generated
+2025-01-17 17:35:54,524 - INFO - Checking token status
+2025-01-17 17:36:19,549 - INFO - File saved: uploads\2022.pdf
+2025-01-17 17:36:19,550 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-17 17:36:19,568 - INFO - Extracted text from page 1
+2025-01-17 17:36:39,111 - INFO - Starting PDF request processing
+2025-01-17 17:36:43,041 - INFO - Starting PDF request processing
+2025-01-17 17:36:44,860 - INFO - Checking token status
+2025-01-17 17:36:50,313 - INFO - Token usage - Prompt: 343, Completion: 419, Total: 0
+2025-01-17 17:36:50,314 - WARNING - No token info from API, estimated usage: 288 tokens
+2025-01-17 17:36:50,315 - INFO - Extracted text from page 2
+2025-01-17 17:36:50,320 - INFO - Token usage - Prompt: 343, Completion: 418, Total: 0
+2025-01-17 17:36:50,320 - WARNING - No token info from API, estimated usage: 288 tokens
+2025-01-17 17:36:50,321 - INFO - Extracted text from page 3
+2025-01-17 17:36:51,322 - INFO - Starting PDF request processing
+2025-01-17 17:36:51,337 - INFO - Starting PDF request processing
+2025-01-17 17:37:04,716 - INFO - Token usage - Prompt: 395, Completion: 507, Total: 0
+2025-01-17 17:37:04,716 - WARNING - No token info from API, estimated usage: 366 tokens
+2025-01-17 17:37:04,719 - INFO - Extracted text from page 4
+2025-01-17 17:37:05,724 - INFO - Starting PDF request processing
+2025-01-17 17:37:06,041 - INFO - Token usage - Prompt: 395, Completion: 505, Total: 0
+2025-01-17 17:37:06,041 - WARNING - No token info from API, estimated usage: 366 tokens
+2025-01-17 17:37:06,042 - INFO - Extracted text from page 5
+2025-01-17 17:37:07,045 - INFO - Starting PDF request processing
+2025-01-17 17:37:15,126 - INFO - Checking token status
+2025-01-17 17:37:17,453 - INFO - Token usage - Prompt: 370, Completion: 559, Total: 0
+2025-01-17 17:37:17,454 - WARNING - No token info from API, estimated usage: 327 tokens
+2025-01-17 17:37:17,457 - INFO - Extracted text from page 6
+2025-01-17 17:37:18,379 - INFO - Token usage - Prompt: 393, Completion: 515, Total: 0
+2025-01-17 17:37:18,379 - WARNING - No token info from API, estimated usage: 355 tokens
+2025-01-17 17:37:18,380 - INFO - Extracted text from page 7
+2025-01-17 17:37:18,470 - INFO - Starting PDF request processing
+2025-01-17 17:37:19,384 - INFO - Starting PDF request processing
+2025-01-17 17:37:30,811 - INFO - Token usage - Prompt: 379, Completion: 501, Total: 0
+2025-01-17 17:37:30,812 - WARNING - No token info from API, estimated usage: 370 tokens
+2025-01-17 17:37:30,813 - INFO - Extracted text from page 8
+2025-01-17 17:37:31,817 - INFO - Starting PDF request processing
+2025-01-17 17:37:31,979 - INFO - Token usage - Prompt: 379, Completion: 504, Total: 0
+2025-01-17 17:37:31,979 - WARNING - No token info from API, estimated usage: 370 tokens
+2025-01-17 17:37:31,980 - INFO - Extracted text from page 9
+2025-01-17 17:37:32,992 - INFO - Starting PDF request processing
+2025-01-21 08:25:29,820 - INFO - New chat request received
+2025-01-21 08:25:29,820 - INFO - Starting chat request processing
+2025-01-21 08:25:33,060 - INFO - Token usage - Prompt: 24, Completion: 12, Total: 36
+2025-01-21 08:25:33,060 - INFO - Updated remaining tokens: 999964
+2025-01-21 08:25:33,060 - INFO - Chat history updated
+2025-01-21 08:25:33,060 - INFO - Chat response generated
+2025-01-21 08:25:50,752 - INFO - Checking token status
+2025-01-21 08:25:58,542 - INFO - File saved: uploads\2023.pdf
+2025-01-21 08:25:58,553 - INFO - Initialized PDF processor for uploads\2023.pdf with 9 pages
+2025-01-21 08:25:58,602 - INFO - Extracted text from page 1
+2025-01-21 08:26:39,440 - INFO - Starting PDF request processing
+2025-01-21 08:26:50,241 - INFO - Starting PDF request processing
+2025-01-21 08:26:50,751 - INFO - Checking token status
+2025-01-21 08:26:52,422 - INFO - Token usage - Prompt: 429, Completion: 510, Total: 939
+2025-01-21 08:26:52,422 - INFO - Updated remaining tokens: 999025
+2025-01-21 08:26:52,445 - INFO - Extracted text from page 2
+2025-01-21 08:27:01,927 - INFO - Token usage - Prompt: 429, Completion: 474, Total: 903
+2025-01-21 08:27:01,927 - INFO - Updated remaining tokens: 998122
+2025-01-21 08:27:01,934 - INFO - Extracted text from page 3
+2025-01-21 08:27:20,760 - INFO - Checking token status
+2025-01-21 08:27:51,179 - INFO - Checking token status
+2025-01-21 08:28:21,188 - INFO - Checking token status
+2025-01-21 08:29:14,181 - INFO - Checking token status
+2025-01-21 08:30:14,188 - INFO - Checking token status
+2025-01-21 08:31:14,186 - INFO - Checking token status
+2025-01-21 08:33:17,569 - INFO - New chat request received
+2025-01-21 08:33:17,570 - INFO - Starting chat request processing
+2025-01-21 08:33:21,027 - INFO - Token usage - Prompt: 26, Completion: 20, Total: 46
+2025-01-21 08:33:21,027 - INFO - Updated remaining tokens: 999954
+2025-01-21 08:33:21,027 - INFO - Chat history updated
+2025-01-21 08:33:21,027 - INFO - Chat response generated
+2025-01-21 08:33:41,119 - INFO - Checking token status
+2025-01-21 08:33:49,391 - INFO - File saved: uploads\2023.pdf
+2025-01-21 08:33:49,394 - INFO - Initialized PDF processor for uploads\2023.pdf with 9 pages
+2025-01-21 08:33:49,450 - INFO - Extracted text from page 1
+2025-01-21 08:34:07,861 - INFO - Starting PDF request processing
+2025-01-21 08:34:09,885 - INFO - Token usage - Prompt: 429, Completion: 510, Total: 939
+2025-01-21 08:34:09,885 - INFO - Updated remaining tokens: 999015
+2025-01-21 08:34:09,913 - INFO - Extracted text from page 2
+2025-01-21 08:34:10,919 - INFO - Starting PDF request processing
+2025-01-21 08:34:11,127 - INFO - Checking token status
+2025-01-21 08:34:35,563 - INFO - Starting PDF request processing
+2025-01-21 08:34:47,065 - INFO - Token usage - Prompt: 457, Completion: 508, Total: 965
+2025-01-21 08:34:47,066 - INFO - Updated remaining tokens: 998050
+2025-01-21 08:34:47,073 - INFO - Extracted text from page 3
+2025-01-21 08:34:48,186 - INFO - Starting PDF request processing
+2025-01-21 08:34:52,480 - INFO - Token usage - Prompt: 457, Completion: 492, Total: 949
+2025-01-21 08:34:52,480 - INFO - Updated remaining tokens: 997101
+2025-01-21 08:34:52,491 - INFO - Extracted text from page 4
+2025-01-21 08:34:54,187 - INFO - Starting PDF request processing
+2025-01-21 08:35:00,163 - INFO - Token usage - Prompt: 442, Completion: 509, Total: 951
+2025-01-21 08:35:00,163 - INFO - Updated remaining tokens: 996150
+2025-01-21 08:35:00,181 - INFO - Extracted text from page 5
+2025-01-21 08:35:02,188 - INFO - Starting PDF request processing
+2025-01-21 08:35:07,927 - INFO - Token usage - Prompt: 440, Completion: 529, Total: 969
+2025-01-21 08:35:07,927 - INFO - Updated remaining tokens: 995181
+2025-01-21 08:35:07,929 - INFO - Extracted text from page 6
+2025-01-21 08:35:09,178 - INFO - Starting PDF request processing
+2025-01-21 08:35:11,183 - INFO - Checking token status
+2025-01-21 08:35:16,211 - INFO - Token usage - Prompt: 420, Completion: 482, Total: 902
+2025-01-21 08:35:16,211 - INFO - Updated remaining tokens: 994279
+2025-01-21 08:35:16,220 - INFO - Extracted text from page 7
+2025-01-21 08:35:17,228 - INFO - Starting PDF request processing
+2025-01-21 08:35:22,495 - INFO - Token usage - Prompt: 435, Completion: 491, Total: 926
+2025-01-21 08:35:22,495 - INFO - Updated remaining tokens: 993353
+2025-01-21 08:35:22,497 - INFO - Extracted text from page 8
+2025-01-21 08:35:23,517 - INFO - Starting PDF request processing
+2025-01-21 08:35:28,419 - INFO - Token usage - Prompt: 389, Completion: 434, Total: 823
+2025-01-21 08:35:28,419 - INFO - Updated remaining tokens: 992530
+2025-01-21 08:35:28,421 - INFO - Extracted text from page 9
+2025-01-21 08:35:29,439 - INFO - Starting PDF request processing
+2025-01-21 08:35:35,466 - INFO - Token usage - Prompt: 416, Completion: 478, Total: 894
+2025-01-21 08:35:35,466 - INFO - Updated remaining tokens: 991636
+2025-01-21 08:35:35,468 - INFO - PDF processing completed, saved to: outputs\20250121_2023.md
+2025-01-21 08:35:35,473 - INFO - PDF document closed
+2025-01-21 08:35:38,086 - INFO - Token usage - Prompt: 328, Completion: 341, Total: 669
+2025-01-21 08:35:38,086 - INFO - Updated remaining tokens: 990967
+2025-01-21 08:35:38,087 - INFO - PDF processing completed, saved to: outputs\20250121_2023.md
+2025-01-21 08:35:38,087 - ERROR - Error processing page: document closed
+2025-01-21 08:36:11,184 - INFO - Checking token status
+2025-01-21 08:37:11,179 - INFO - Checking token status
+2025-01-21 08:38:12,187 - INFO - Checking token status
+2025-01-21 08:39:13,177 - INFO - Checking token status
