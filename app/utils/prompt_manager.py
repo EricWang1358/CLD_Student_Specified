@@ -1,6 +1,7 @@
 import os
 import json
 from flask import current_app
+from app.config.prompts import PDF_PROMPTS  # 使用 prompts.py 中的提示
 
 class PromptManager:
     """
@@ -8,6 +9,7 @@ class PromptManager:
     用于管理和加载PDF处理的提示模板
     """
     def __init__(self):
+        self.prompts = PDF_PROMPTS
         self.prompts_dir = 'prompts'
         self._ensure_prompts_dir()
         self._ensure_default_prompts()
@@ -41,13 +43,12 @@ class PromptManager:
                 json.dump(default_prompts, f, ensure_ascii=False, indent=2)
 
     def get_all_prompts(self):
-        """获取所有提示模板"""
-        prompts = []
-        for file in os.listdir(self.prompts_dir):
-            if file.endswith('.json'):
-                with open(os.path.join(self.prompts_dir, file), 'r', encoding='utf-8') as f:
-                    prompts.extend(json.load(f))
-        return prompts
+        """获取所有PDF处理提示"""
+        return self.prompts
+
+    def get_prompt_by_id(self, prompt_id):
+        """根据ID获取提示"""
+        return next((p for p in self.prompts if p['id'] == int(prompt_id)), None)
 
     def add_prompt(self, name, description, prompt_text):
         """添加新的提示模板"""
@@ -76,7 +77,4 @@ class PromptManager:
 
     def get_default_prompt(self):
         """获取默认提示"""
-        prompts = self.get_all_prompts()
-        if prompts:
-            return prompts[0]['prompt']
-        return "请将这段文本转换为详细的markdown格式笔记，包含标题、要点和补充说明。" 
+        return self.prompts[0]['prompt'] 

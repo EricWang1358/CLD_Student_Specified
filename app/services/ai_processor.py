@@ -54,19 +54,33 @@ class AIProcessor:
             else:
                 logger.info("-"*30 + " PDF处理开始 " + "-"*30)
                 logger.info(f"处理PDF文本 (长度: {len(text)} 字符)")
+                logger.info(f"使用处理提示: {instruction[:100]}...")  # 记录使用的提示
+
+            # 构建请求内容
+            messages = []
+            if instruction:
+                # 添加系统提示作为第一条消息
+                messages.append({
+                    "role": "system",
+                    "content": instruction
+                })
+            
+            # 添加用户消息
+            messages.append({
+                "role": "user",
+                "content": text
+            })
             
             payload = {
                 "model": "claude-3-opus-20240229",
-                "messages": [
-                    {
-                        "role": "user",
-                        "content": text
-                    }
-                ]
+                "messages": messages,
+                "temperature": 0.7,
+                "max_tokens": 2000
             }
-            
+
             logger.debug(f"请求内容: {json.dumps(payload, ensure_ascii=False)}")
             
+            # 发送请求
             max_retries = 5
             retry_count = 0
             
@@ -77,50 +91,35 @@ class AIProcessor:
                         self.url,
                         headers=self.headers,
                         json=payload,
-                        timeout=(30, 120),  # 增加连接超时和读取超时时间
-                        verify=True
+                        timeout=30
                     )
                     
-                    logger.debug(f"Response status: {response.status_code}")
-                    
                     if response.status_code == 200:
-                        response_data = response.json()
-                        content = response_data.get('choices', [{}])[0].get('message', {}).get('content', '')
+                        result = response.json()
+                        content = result['choices'][0]['message']['content']
                         logger.info(f"AI响应: {content[:100]}...")
                         
-                        usage = response_data.get('usage', {})
-                        logger.info(f"Token使用情况:")
+                        # 记录token使用情况
+                        usage = result.get('usage', {})
+                        logger.info("Token使用情况:")
                         logger.info(f"  - 提示tokens: {usage.get('prompt_tokens', 0)}")
                         logger.info(f"  - 回复tokens: {usage.get('completion_tokens', 0)}")
                         logger.info(f"  - 总计tokens: {usage.get('total_tokens', 0)}")
+                        
                         logger.info("-"*30 + " API请求结束 " + "-"*30)
+                        return result
                         
-                        return response_data
-                        
-                    elif response.status_code == 408:
-                        logger.warning(f"请求超时 (第 {retry_count + 1}/{max_retries} 次尝试)")
-                        retry_count += 1
-                        if retry_count == max_retries:
-                            raise TimeoutError("API request timed out after multiple retries")
-                        time.sleep(2)  # 增加重试等待时间
                     else:
-                        error_msg = f"API request failed: {response.text}"
-                        logger.error(error_msg)
-                        return {"error": error_msg}
-                        
+                        raise Exception(f"API请求失败: {response.status_code} - {response.text}")
+                    
                 except (requests.Timeout, requests.ConnectionError) as e:
-                    logger.warning(f"请求失败 (第 {retry_count + 1}/{max_retries} 次尝试): {str(e)}")
                     retry_count += 1
-                    if retry_count == max_retries:
-                        error_msg = "API request timed out after multiple retries"
-                        logger.error(error_msg)
-                        return {"error": error_msg}
-                    time.sleep(2)  # 增加重试等待时间
-                except requests.RequestException as e:
-                    error_msg = f"Request failed: {str(e)}"
-                    logger.error(error_msg)
-                    return {"error": error_msg}
-            
+                    if retry_count < max_retries:
+                        logger.warning(f"请求失败 (第 {retry_count}/{max_retries} 次尝试): {str(e)}")
+                        time.sleep(1)  # 等待1秒后重试
+                    else:
+                        raise TimeoutError("API请求超时,已达到最大重试次数")
+                    
         except Exception as e:
             logger.error("-"*30 + " 错误信息 " + "-"*30)
             logger.error(f"处理请求时出错: {str(e)}")

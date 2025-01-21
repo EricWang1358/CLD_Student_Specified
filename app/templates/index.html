@@ -417,15 +417,37 @@
         }
 
         .prompt-item {
-            padding: 12px;
+            padding: 16px;
             border: 1px solid var(--border-color);
-            border-radius: 4px;
-            margin-bottom: 8px;
+            border-radius: 8px;
+            margin-bottom: 12px;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
 
         .prompt-item:hover {
             background-color: var(--bg-secondary);
+            transform: translateY(-1px);
+        }
+
+        .prompt-item h4 {
+            margin: 0 0 8px 0;
+            color: var(--text-primary);
+        }
+
+        .prompt-item p {
+            margin: 0;
+            color: var(--text-secondary);
+        }
+
+        .prompt-preview {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+            padding: 8px;
+            background-color: var(--bg-tertiary);
+            border-radius: 4px;
+            white-space: pre-wrap;
         }
 
         .balance-info {
@@ -532,6 +554,128 @@
 
         .message.user .message-time {
             color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* 消息容器样式 */
+        .message {
+            padding: 24px 32px;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        /* 用户消息样式 */
+        .message.user {
+            background-color: var(--bg-tertiary);
+        }
+
+        .message.user .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--message-user);
+            padding: 12px 16px;
+            border-radius: 8px;
+            color: white;
+        }
+
+        /* AI消息样式 */
+        .message.assistant {
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .message.assistant .content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            padding-right: 40px;  /* 为复制按钮留出空间 */
+        }
+
+        /* 复制按钮样式 */
+        .copy-button {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 6px;
+            background-color: transparent;
+            border: none;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 12px;
+            opacity: 0;
+            transition: all 0.2s ease;
+        }
+
+        .message.assistant:hover .copy-button {
+            opacity: 0.7;
+        }
+
+        .copy-button:hover {
+            opacity: 1 !important;
+            background-color: var(--bg-tertiary);
+        }
+
+        .copy-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* 复制成功提示 */
+        .copy-tooltip {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            background-color: var(--success-color);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .copy-tooltip.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            border-radius: 4px;
+            color: white;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        .notification.success {
+            background-color: var(--success-color);
+        }
+
+        .notification.error {
+            background-color: var(--error-color);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .fade-out {
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.3s ease;
         }
     </style>
 </head>
@@ -709,6 +853,15 @@
 
         async function processCurrentPage() {
             try {
+                // 获取当前显示在文本框中的提示内容
+                const customPromptInput = document.getElementById('custom-prompt');
+                const promptText = customPromptInput ? customPromptInput.value.trim() : '';
+                
+                if (!promptText) {
+                    alert('请先选择或输入处理提示');
+                    return;
+                }
+                
                 const response = await fetch('/process-page', {
                     method: 'POST',
                     headers: {
@@ -716,7 +869,7 @@
                     },
                     body: JSON.stringify({
                         session_id: currentSessionId,
-                        prompt: document.getElementById('custom-prompt').value
+                        prompt: promptText  // 使用当前文本框中的提示
                     })
                 });
                 
@@ -838,6 +991,9 @@
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
             
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'content';
+            
             // 处理可能的HTML内容
             const sanitizedContent = content
                 .replace(/&/g, '&amp;')
@@ -845,16 +1001,39 @@
                 .replace(/>/g, '&gt;')
                 .replace(/"/g, '&quot;')
                 .replace(/'/g, '&#039;')
-                .replace(/\n/g, '<br>');  // 保留换行
+                .replace(/\n/g, '<br>');
             
-            // 添加时间戳
-            const time = new Date().toLocaleTimeString();
+            contentDiv.innerHTML = sanitizedContent;
             
-            messageDiv.innerHTML = `
-                ${sanitizedContent}
-                <div class="message-time">${time}</div>
-            `;
+            // 如果是AI回复，添加复制按钮
+            if (!isUser) {
+                const copyButton = document.createElement('button');
+                copyButton.className = 'copy-button';
+                copyButton.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/>
+                    </svg>
+                `;
+                
+                copyButton.addEventListener('click', () => {
+                    navigator.clipboard.writeText(content).then(() => {
+                        const tooltip = document.createElement('div');
+                        tooltip.className = 'copy-tooltip';
+                        tooltip.textContent = '已复制！';
+                        copyButton.appendChild(tooltip);
+                        
+                        setTimeout(() => tooltip.classList.add('show'), 0);
+                        setTimeout(() => {
+                            tooltip.classList.remove('show');
+                            setTimeout(() => tooltip.remove(), 300);
+                        }, 2000);
+                    });
+                });
+                
+                contentDiv.appendChild(copyButton);
+            }
             
+            messageDiv.appendChild(contentDiv);
             document.getElementById('chat-messages').appendChild(messageDiv);
             messageDiv.scrollIntoView({ behavior: 'smooth' });
         }
@@ -932,51 +1111,53 @@
                 const response = await fetch('/prompts');
                 const prompts = await response.json();
                 
+                const promptsList = document.getElementById('prompts-list');
                 promptsList.innerHTML = prompts.map(prompt => `
-                    <div class="prompt-item" data-prompt-id="${prompt.id}" data-prompt-text="${prompt.prompt}">
+                    <div class="prompt-item" data-prompt-id="${prompt.id}">
                         <h4>${prompt.name}</h4>
                         <p>${prompt.description}</p>
+                        <div class="prompt-preview">${prompt.prompt}</div>
                     </div>
                 `).join('');
                 
                 // 添加点击事件
                 document.querySelectorAll('.prompt-item').forEach(item => {
                     item.addEventListener('click', async () => {
-                        try {
-                            const promptId = parseInt(item.dataset.promptId);
-                            const promptText = item.dataset.promptText;
-                            
-                            // 更新输入框
+                        const promptId = item.dataset.promptId;
+                        const selectedPrompt = prompts.find(p => p.id.toString() === promptId);
+                        
+                        if (selectedPrompt) {
+                            // 更新输入框显示完整提示内容
                             const customPromptInput = document.getElementById('custom-prompt');
                             if (customPromptInput) {
-                                customPromptInput.value = promptText;
-                                // 触发 change 事件
-                                customPromptInput.dispatchEvent(new Event('change'));
+                                customPromptInput.value = selectedPrompt.prompt;
                             }
                             
-                            // 更新服务器端session
-                            const response = await fetch('/update-prompt', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify({ promptId })
-                            });
+                            // 关闭提示选择框
+                            document.getElementById('prompts-modal').style.display = 'none';
                             
-                            const data = await response.json();
-                            if (data.success) {
-                                promptsModal.style.display = 'none';
-                            } else {
-                                console.error('Failed to update prompt:', data.error);
-                            }
-                        } catch (error) {
-                            console.error('Failed to update prompt:', error);
+                            // 显示提示已更新的通知
+                            showNotification(`已选择提示: ${selectedPrompt.name}`);
                         }
                     });
                 });
             } catch (error) {
                 console.error('Failed to load prompts:', error);
+                showNotification('加载提示失败', 'error');
             }
+        }
+
+        // 添加提示更新成功的通知
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('fade-out');
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
         }
 
         // 页面预览功能
