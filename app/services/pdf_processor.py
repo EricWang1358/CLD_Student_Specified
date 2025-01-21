@@ -1,4 +1,4 @@
-import fitz
+import fitz # type: ignore
 import logging
 
 logger = logging.getLogger(__name__)

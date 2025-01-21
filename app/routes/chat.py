@@ -27,10 +27,8 @@ def chat():
         logger.info("="*50)
         logger.info("新的聊天请求")
         logger.info(f"用户消息: {message}")
-        logger.debug(f"消息长度: {len(message)} 字符")
         
         current_prompt = session.get('current_prompt', "你是一个友好的AI助手，请用简洁专业的方式回答问题。")
-        logger.debug(f"使用提示: {current_prompt}")
         
         processor = AIProcessor()
         response = processor.process_text(message, current_prompt, is_chat=True)
@@ -39,14 +37,12 @@ def chat():
             logger.error(f"处理消息时出错: {response['error']}")
             return jsonify({'error': response['error']}), 500
             
-        content = response.get('choices', [{}])[0].get('message', {}).get('content', '')
+        content = response['content']  # 不再尝试从 choices 中获取
         logger.info(f"AI回复: {content}")
-        logger.debug(f"回复长度: {len(content)} 字符")
         
         # 添加消息到聊天历史
         add_to_history('user', message)
-        add_to_history('assistant', content, 
-                      tokens_used=response.get('usage', {}).get('total_tokens', 0))
+        add_to_history('assistant', content)
         
         logger.info("聊天历史已更新")
         logger.info("="*50)

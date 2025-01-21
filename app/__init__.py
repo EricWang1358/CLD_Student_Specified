@@ -58,13 +58,9 @@ def create_app(config_class=Config):
     logger.addHandler(file_handler)
 
     # 注册蓝图，将不同功能模块的路由注册到应用
-    # chat_bp: 处理聊天相关的路由
-    # pdf_bp: 处理PDF文件相关的路由
-    # token_bp: 处理token计数相关的路由
-    from app.routes import chat_bp, pdf_bp, token_bp
+    from app.routes import chat_bp, pdf_bp
     app.register_blueprint(chat_bp)
     app.register_blueprint(pdf_bp)
-    app.register_blueprint(token_bp)
 
     # 添加根路由，处理主页访问
     # 在前端请求 '/' 时调用

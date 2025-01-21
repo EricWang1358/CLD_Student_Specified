@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "content": "这段文本讨论了两种不同的城市政策:鼓励保护老建筑或鼓励用新建筑替换老建筑。主要观点和关键要点如下:\n\n- 有些城市鼓励保护老建筑,而另一些城市鼓励用新建筑替换老建筑\n- 文章提出一个问题:你认为哪种做法更好?为什么?\n\n要点总结:\n- 两种城市政策的对比:\n  - 政策1:鼓励保护老建筑 \n  - 政策2:鼓励用新建筑替换老建筑\n- 文章提出需要思考的问题:\n  - 你更倾向于哪种政策?\n  - 为什么你认为那种政策更好?",
+  "usage": {
+    "prompt_tokens": 426,
+    "completion_tokens": 236,
+    "total_tokens": 662,
+    "prompt_tokens_details": {
+      "cached_tokens_details": {}
+    },
+    "completion_tokens_details": {}
+  },
+  "timestamp": "2025-01-21 17:12:17",
+  "prompt": "请总结这段文本的主要观点和关键要点，以markdown格式的要点列表输出。"
+}

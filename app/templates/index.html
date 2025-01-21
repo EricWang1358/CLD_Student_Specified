@@ -677,6 +677,31 @@
             transform: translateX(100%);
             transition: all 0.3s ease;
         }
+
+        .processing-log {
+            margin-top: 20px;
+            padding: 16px;
+            background-color: var(--bg-tertiary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .log-content {
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            padding: 8px;
+            background-color: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .log-entry {
+            margin: 4px 0;
+            padding: 4px 8px;
+            border-left: 3px solid var(--accent-primary);
+        }
     </style>
 </head>
 <body>
@@ -753,9 +778,9 @@
             
             <div id="status"></div>
             
-            <div class="logs-container">
+            <div id="processing-log" class="processing-log">
                 <h3>处理日志</h3>
-                <div id="processing-logs"></div>
+                <div class="log-content"></div>
             </div>
         </div>
     </div>
@@ -853,7 +878,6 @@
 
         async function processCurrentPage() {
             try {
-                // 获取当前显示在文本框中的提示内容
                 const customPromptInput = document.getElementById('custom-prompt');
                 const promptText = customPromptInput ? customPromptInput.value.trim() : '';
                 
@@ -862,6 +886,8 @@
                     return;
                 }
                 
+                appendLog(`开始处理页面...`);
+                
                 const response = await fetch('/process-page', {
                     method: 'POST',
                     headers: {
@@ -869,38 +895,35 @@
                     },
                     body: JSON.stringify({
                         session_id: currentSessionId,
-                        prompt: promptText  // 使用当前文本框中的提示
+                        prompt: promptText
                     })
                 });
-                
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
                 
                 const data = await response.json();
                 
                 if (data.success) {
-                    // 更新处理结果显示
+                    appendLog(`页面处理成功`);
                     document.getElementById('processed-text').textContent = data.content;
                     
                     if (data.is_complete) {
+                        appendLog(`PDF处理完成！`);
                         status.innerHTML = '处理完成！';
                         status.className = 'success';
                         currentSessionId = null;
                         document.getElementById('pdf-processing-container').style.display = 'none';
                     } else {
-                        // 更新页面显示
                         updatePageDisplay(data.page_info);
-                        // 如果开启了自动继续，延迟1秒后处理下一页
                         if (document.getElementById('auto-continue').checked) {
                             setTimeout(processCurrentPage, 1000);
                         }
                     }
                 } else {
+                    appendLog(`处理出错: ${data.error}`);
                     status.innerHTML = `错误: ${data.error}`;
                     status.className = 'error';
                 }
             } catch (error) {
+                appendLog(`处理失败: ${error.message}`);
                 console.error('Failed to process page:', error);
                 status.innerHTML = '处理过程中发生错误';
                 status.className = 'error';
@@ -1334,6 +1357,16 @@
 
         // 添加发送按钮点击事件
         document.getElementById('send-button').addEventListener('click', sendMessage);
+
+        // 添加日志显示函数
+        function appendLog(message) {
+            const logContent = document.querySelector('.log-content');
+            const logEntry = document.createElement('div');
+            logEntry.className = 'log-entry';
+            logEntry.textContent = message;
+            logContent.appendChild(logEntry);
+            logContent.scrollTop = logContent.scrollHeight;
+        }
     </script>
 </body>
 </html> 

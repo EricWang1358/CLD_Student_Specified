@@ -54,18 +54,16 @@ class AIProcessor:
             else:
                 logger.info("-"*30 + " PDF处理开始 " + "-"*30)
                 logger.info(f"处理PDF文本 (长度: {len(text)} 字符)")
-                logger.info(f"使用处理提示: {instruction[:100]}...")  # 记录使用的提示
+                logger.info(f"使用处理提示: {instruction[:100]}...")
 
             # 构建请求内容
             messages = []
             if instruction:
-                # 添加系统提示作为第一条消息
                 messages.append({
                     "role": "system",
                     "content": instruction
                 })
             
-            # 添加用户消息
             messages.append({
                 "role": "user",
                 "content": text
@@ -107,7 +105,17 @@ class AIProcessor:
                         logger.info(f"  - 总计tokens: {usage.get('total_tokens', 0)}")
                         
                         logger.info("-"*30 + " API请求结束 " + "-"*30)
-                        return result
+
+                        # 格式化输出结果
+                        formatted_result = {
+                            'success': True,
+                            'content': content,
+                            'usage': usage,
+                            'timestamp': time.strftime('%Y-%m-%d %H:%M:%S'),
+                            'prompt': instruction
+                        }
+                        
+                        return formatted_result
                         
                     else:
                         raise Exception(f"API请求失败: {response.status_code} - {response.text}")
@@ -116,7 +124,7 @@ class AIProcessor:
                     retry_count += 1
                     if retry_count < max_retries:
                         logger.warning(f"请求失败 (第 {retry_count}/{max_retries} 次尝试): {str(e)}")
-                        time.sleep(1)  # 等待1秒后重试
+                        time.sleep(1)
                     else:
                         raise TimeoutError("API请求超时,已达到最大重试次数")
                     

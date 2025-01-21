@@ -7,6 +7,7 @@ import os
 import uuid
 import logging
 import traceback
+import json
 
 # 创建日志记录器
 logger = logging.getLogger(__name__)
@@ -143,14 +144,10 @@ def process_page():
     try:
         data = request.get_json()
         session_id = data.get('session_id')
-        custom_prompt = data.get('prompt')
+        custom_prompt = data.get('prompt')  # 直接使用前端传来的提示文本
         
         logger.info(f"Processing PDF page request - Session ID: {session_id}")
-        
-        # 如果没有提供自定义提示，使用当前选中的提示
-        if not custom_prompt:
-            custom_prompt = session.get('current_prompt', prompt_manager.get_default_prompt())
-            logger.debug(f"Using prompt: {custom_prompt[:50]}...")
+        logger.info(f"Using prompt: {custom_prompt}")  # 记录使用的提示
         
         if not session_id or session_id not in pdf_sessions:
             logger.error(f"Invalid session ID: {session_id}")
@@ -158,7 +155,6 @@ def process_page():
             
         session = pdf_sessions[session_id]
         processor = session['processor']
-        ai_processor = AIProcessor()
         
         # 获取当前页信息
         page_info = processor.get_next_page()
@@ -170,9 +166,9 @@ def process_page():
             })
         
         logger.info(f"Processing page {processor.current_page + 1}/{processor.total_pages}")
-        logger.debug(f"Page text length: {len(page_info['text'])} characters")
         
         # 处理当前页
+        ai_processor = AIProcessor()
         response = ai_processor.process_text(
             page_info['text'],
             custom_prompt
@@ -181,9 +177,51 @@ def process_page():
         if 'error' in response:
             logger.error(f"Error processing page: {response['error']}")
             return jsonify(response), 500
-        
-        processed_content = response.get('choices', [{}])[0].get('message', {}).get('content', '')
-        logger.debug(f"Processed content length: {len(processed_content)} characters")
+            
+        try:
+            # 创建输出目录
+            output_dir = os.path.join(current_app.config['UPLOAD_FOLDER'], 'outputs', session_id)
+            os.makedirs(output_dir, exist_ok=True)
+            
+            # 保存JSON格式结果
+            json_file = os.path.join(output_dir, f"page_{processor.current_page + 1}.json")
+            with open(json_file, 'w', encoding='utf-8') as f:
+                json.dump({
+                    'page_number': processor.current_page + 1,
+                    'total_pages': processor.total_pages,
+                    'content': response['content'],
+                    'prompt': custom_prompt,
+                    'timestamp': response['timestamp'],
+                    'usage': response.get('usage', {})
+                }, f, ensure_ascii=False, indent=2)
+            
+            # 保存Markdown格式结果
+            md_file = os.path.join(output_dir, f"page_{processor.current_page + 1}.md")
+            with open(md_file, 'w', encoding='utf-8') as f:
+                f.write(f"""# 第 {processor.current_page + 1} 页处理结果
+
+## 使用的提示
+```
+{custom_prompt}
+```
+
+## 处理结果
+{response['content']}
+
+## 处理信息
+- 处理时间: {response['timestamp']}
+- Token使用:
+  - 提示tokens: {response['usage'].get('prompt_tokens', 0)}
+  - 回复tokens: {response['usage'].get('completion_tokens', 0)}
+  - 总计tokens: {response['usage'].get('total_tokens', 0)}
+""")
+                
+            logger.info(f"Saved processing results to {output_dir}")
+            
+        except Exception as e:
+            logger.error(f"Failed to save processing result: {str(e)}")
+            logger.error(traceback.format_exc())
+            # 继续处理,但记录错误
         
         # 更新页码
         processor.current_page += 1
@@ -191,7 +229,7 @@ def process_page():
         
         return jsonify({
             'success': True,
-            'content': processed_content,
+            'content': response['content'],
             'page_info': page_info,
             'is_complete': processor.current_page >= processor.total_pages
         })
