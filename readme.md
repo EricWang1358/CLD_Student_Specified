@@ -39,4 +39,86 @@
 
 ## 安装和使用
 
-1. 克隆仓库
+**1. 克隆仓库**
+
+bash
+
+```
+git clone https://github.com/EricWang1358/CLD\_Student\_Specified.git
+
+cd CLD\_Student\_Specified
+```
+
+**2. 安装依赖**
+
+bash
+
+```
+pip install -r requirements.txt
+```
+
+**3. 配置API密钥**
+
+**创建 .env 文件并添加您的API密钥：**
+
+API\_KEY=your-api-key-here
+
+**4. 运行应用**
+
+bash
+
+```
+python main.py
+```
+
+**5. 访问应用**
+
+**打开浏览器访问 http://localhost:5000**
+
+**## 项目结构**
+
+CLD\_Student\_Specified/
+
+├── main.py # 主应用程序
+
+├── templates/ # 前端模板
+
+│ └── index.html # 主页面
+
+├── uploads/ # PDF上传目录
+
+├── outputs/ # 输出文件目录
+
+├── requirements.txt # 项目依赖
+
+└── README.md # 项目文档
+
+**## 注意事项**
+
+**- 确保有足够的API额度**
+
+**- PDF文件大小限制为16MB**
+
+**- 建议使用现代浏览器访问**
+
+**- 处理大文件时请耐心等待**
+
+**## 开发计划**
+
+**- [ ] 增加更多文件格式支持**
+
+**- [ ] 优化Token使用效率**
+
+**- [ ] 添加批量处理功能**
+
+**- [ ] 增加导出格式选项**
+
+**## 贡献**
+
+**欢迎提交Issue和Pull Request！**
+
+**## 许可**
+
+**MIT License**
+
+现在，您可以按以下步骤
