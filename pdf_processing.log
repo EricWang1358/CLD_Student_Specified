@@ -182,3 +182,1717 @@
 2025-01-21 08:38:12,187 - INFO - Checking token status
 2025-01-21 08:39:13,177 - INFO - Checking token status
 2025-01-21 08:48:00,175 - INFO - Checking token status
+2025-01-21 11:06:11,470 - INFO - Initialized PDF processor for uploads\Lecture_1_pwd3180.pdf with 0 pages
+2025-01-21 11:07:24,948 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
+2025-01-21 11:07:24,957 - INFO - Extracted text from page 1
+2025-01-21 11:13:28,958 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
+2025-01-21 11:13:28,965 - INFO - Extracted text from page 1
+2025-01-21 11:13:35,326 - INFO - Extracted text from page 2
+2025-01-21 11:13:45,346 - INFO - Extracted text from page 3
+2025-01-21 11:13:48,273 - INFO - Extracted text from page 4
+2025-01-21 11:13:53,684 - INFO - Extracted text from page 5
+2025-01-21 11:13:55,545 - INFO - Extracted text from page 6
+2025-01-21 11:13:56,508 - INFO - Extracted text from page 7
+2025-01-21 11:13:59,196 - INFO - Extracted text from page 8
+2025-01-21 11:14:13,122 - INFO - Extracted text from page 9
+2025-01-21 11:14:13,787 - INFO - Extracted text from page 10
+2025-01-21 11:14:14,464 - INFO - Extracted text from page 11
+2025-01-21 11:14:14,956 - INFO - Extracted text from page 12
+2025-01-21 11:14:15,839 - INFO - Extracted text from page 13
+2025-01-21 11:14:16,541 - INFO - Extracted text from page 14
+2025-01-21 11:14:17,151 - INFO - Extracted text from page 15
+2025-01-21 11:14:17,720 - INFO - Extracted text from page 16
+2025-01-21 11:14:18,302 - INFO - Extracted text from page 17
+2025-01-21 11:14:19,038 - INFO - Extracted text from page 18
+2025-01-21 11:14:19,632 - INFO - Extracted text from page 19
+2025-01-21 11:14:20,187 - INFO - Extracted text from page 20
+2025-01-21 11:14:20,816 - INFO - Extracted text from page 21
+2025-01-21 11:14:25,021 - INFO - Extracted text from page 22
+2025-01-21 11:14:25,700 - INFO - Extracted text from page 23
+2025-01-21 11:14:26,242 - INFO - Extracted text from page 24
+2025-01-21 11:16:18,051 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
+2025-01-21 11:16:18,055 - INFO - Extracted text from page 1
+2025-01-21 11:27:28,258 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
+2025-01-21 11:27:28,264 - INFO - Extracted text from page 1
+2025-01-21 11:27:31,273 - INFO - Extracted text from page 2
+2025-01-21 11:28:06,450 - INFO - Extracted text from page 3
+2025-01-21 11:29:56,523 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
+2025-01-21 11:29:56,528 - INFO - Extracted text from page 1
+2025-01-21 11:29:57,840 - INFO - Extracted text from page 2
+2025-01-21 11:31:35,993 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-21 11:31:36,009 - INFO - Extracted text from page 1
+2025-01-21 11:33:04,630 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-21 11:33:04,647 - INFO - Extracted text from page 1
+2025-01-21 11:33:13,517 - INFO - Extracted text from page 1
+2025-01-21 11:33:13,517 - INFO - Starting PDF request processing
+2025-01-21 11:33:15,152 - ERROR - API returned error: {'message': '无效的令牌 (request id: 20250121113313239475077MHMCWFg8)', 'type': 'new_api_error'}
+2025-01-21 11:43:03,052 - INFO - Starting chat request processing
+2025-01-21 11:43:04,354 - ERROR - API error response: {"error":{"message":"无效的令牌 (request id: 20250121114302861256585bWJgUuA0)","type":"new_api_error"}}
+2025-01-21 11:46:15,126 - INFO - Starting chat request processing
+2025-01-21 11:46:16,108 - ERROR - API error response: {"error":{"message":"无效的令牌 (request id: 20250121114614602818050sgrbdDjN)","type":"new_api_error"}}
+2025-01-21 11:46:55,822 - INFO - Starting chat request processing
+2025-01-21 11:46:58,077 - INFO - Token usage - Prompt: 25, Completion: 20, Total: 45
+2025-01-21 11:46:58,077 - INFO - Updated remaining tokens: 999955
+2025-01-21 11:46:58,077 - INFO - Chat history updated
+2025-01-21 11:48:44,854 - ERROR - Balance check error: Expecting value: line 1 column 1 (char 0)
+2025-01-21 11:49:45,303 - ERROR - Balance check error: Expecting value: line 1 column 1 (char 0)
+2025-01-21 11:50:13,420 - ERROR - Balance check error: Expecting value: line 1 column 1 (char 0)
+2025-01-21 11:50:13,420 - INFO - Balance check test result: {
+  "success": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+}
+2025-01-21 11:51:47,090 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 11:51:47,090 - INFO - Using URL: https://query.xiaoai.plus/api/balance
+2025-01-21 11:51:49,253 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 11:56:20,909 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 11:56:20,909 - INFO - Using URL: https://query.xiaoai.plus/quota
+2025-01-21 11:56:21,862 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 11:58:58,097 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 11:58:58,097 - ERROR - Detailed balance test error: 'BalanceChecker' object has no attribute 'query_url'
+2025-01-21 11:59:50,787 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 11:59:50,787 - ERROR - Detailed balance test error: 'BalanceChecker' object has no attribute 'query_url'
+2025-01-21 12:00:03,807 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 12:00:03,807 - ERROR - Detailed balance test error: 'BalanceChecker' object has no attribute 'query_url'
+2025-01-21 12:01:23,342 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 12:01:23,342 - ERROR - Detailed balance test error: 'BalanceChecker' object has no attribute 'query_url'
+2025-01-21 12:02:41,494 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 12:02:41,494 - ERROR - Detailed balance test error: 'BalanceChecker' object has no attribute 'query_url'
+2025-01-21 12:03:31,185 - INFO - Testing balance check with API key: LtHl3eFX...
+2025-01-21 12:03:31,185 - INFO - Using base URL: https://query.xiaoai.plus
+2025-01-21 12:03:33,048 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 12:03:36,529 - INFO - Testing balance check with API key: LtHl3eFX...
+2025-01-21 12:03:36,529 - INFO - Using base URL: https://query.xiaoai.plus
+2025-01-21 12:03:38,224 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 12:03:38,226 - INFO - Testing balance check with API key: LtHl3eFX...
+2025-01-21 12:03:38,226 - INFO - Using base URL: https://query.xiaoai.plus
+2025-01-21 12:03:40,205 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 12:04:38,519 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 12:04:38,520 - INFO - Using base URL: https://query.xiaoai.plus
+2025-01-21 12:04:40,268 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 12:04:41,217 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 12:04:41,217 - INFO - Using base URL: https://query.xiaoai.plus
+2025-01-21 12:04:43,248 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 12:05:28,260 - INFO - Testing balance check with API key: sk-LtHl3...
+2025-01-21 12:05:28,260 - INFO - Using base URL: https://query.xiaoai.plus
+2025-01-21 12:05:29,085 - ERROR - Request failed: Expecting value: line 1 column 1 (char 0)
+2025-01-21 12:12:12,858 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-21 12:12:12,876 - INFO - Extracted text from page 1
+2025-01-21 12:12:19,059 - INFO - Extracted text from page 1
+2025-01-21 12:12:19,059 - INFO - Starting PDF request processing
+2025-01-21 12:12:20,158 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:20,160 - INFO - Extracted text from page 2
+2025-01-21 12:12:20,160 - INFO - Starting PDF request processing
+2025-01-21 12:12:21,255 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:21,256 - INFO - Extracted text from page 3
+2025-01-21 12:12:21,256 - INFO - Starting PDF request processing
+2025-01-21 12:12:22,428 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:22,432 - INFO - Extracted text from page 4
+2025-01-21 12:12:22,432 - INFO - Starting PDF request processing
+2025-01-21 12:12:22,873 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:22,875 - INFO - Extracted text from page 5
+2025-01-21 12:12:22,875 - INFO - Starting PDF request processing
+2025-01-21 12:12:23,417 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:23,421 - INFO - Extracted text from page 6
+2025-01-21 12:12:23,421 - INFO - Starting PDF request processing
+2025-01-21 12:12:24,580 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:24,583 - INFO - Extracted text from page 7
+2025-01-21 12:12:24,583 - INFO - Starting PDF request processing
+2025-01-21 12:12:26,683 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:26,684 - INFO - Extracted text from page 8
+2025-01-21 12:12:26,685 - INFO - Starting PDF request processing
+2025-01-21 12:12:27,827 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:27,829 - INFO - Extracted text from page 9
+2025-01-21 12:12:27,829 - INFO - Starting PDF request processing
+2025-01-21 12:12:28,258 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:12:28,259 - INFO - Extracted text from page 10
+2025-01-21 12:12:28,259 - INFO - Starting PDF request processing
+2025-01-21 12:12:29,440 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:13:11,556 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-21 12:13:11,572 - INFO - Extracted text from page 1
+2025-01-21 12:13:14,025 - INFO - Extracted text from page 1
+2025-01-21 12:13:14,025 - INFO - Starting PDF request processing
+2025-01-21 12:13:15,244 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:13:29,975 - INFO - Starting chat request processing
+2025-01-21 12:13:30,817 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:14:20,149 - INFO - Starting chat request processing
+2025-01-21 12:14:21,375 - ERROR - API request failed: {
+  "error": {
+    "type": "forbidden",
+    "message": "Request not allowed"
+  }
+}
+2025-01-21 12:15:01,506 - INFO - Starting chat request processing
+2025-01-21 12:15:03,513 - ERROR - API request failed: {"type":"error","error":{"type":"authentication_error","message":"invalid x-api-key"}}
+2025-01-21 12:15:59,215 - INFO - Starting chat request processing
+2025-01-21 12:16:00,580 - ERROR - API key unauthorized or invalid
+2025-01-21 12:16:59,137 - INFO - Starting chat request processing
+2025-01-21 12:17:08,964 - ERROR - Unexpected API response format: {'id': 'chatcmpl-rXiOIhl8AzEQYW0KFi2eY7pWeKnj1', 'object': 'chat.completion', 'created': 1737433027, 'model': 'claude-3-opus-20240229', 'choices': [{'index': 0, 'message': {'role': 'assistant', 'content': '你好!很高兴认识你。我是一名友好的AI助手,乐意以简洁专业的方式回答你的任何问题。请随时告诉我有什么可以帮到你的地方。'}, 'finish_reason': 'stop'}], 'usage': {'prompt_tokens': 0, 'completion_tokens': 0, 'total_tokens': 0}}
+2025-01-21 12:17:48,586 - INFO - Starting chat request processing
+2025-01-21 13:52:27,104 - INFO - Starting chat request processing
+2025-01-21 13:53:24,661 - INFO - Starting chat request processing
+2025-01-21 13:55:39,372 - INFO - Starting chat request processing
+2025-01-21 13:56:58,287 - INFO - Starting chat request processing
+2025-01-21 13:57:08,563 - ERROR - Failed to parse line: [DONE], error: Expecting value: line 1 column 2 (char 1)
+2025-01-21 13:58:11,376 - INFO - Starting chat request processing
+2025-01-21 14:00:17,054 - INFO - Starting chat request processing
+2025-01-21 14:02:29,462 - INFO - Starting chat request processing
+2025-01-21 14:03:38,359 - INFO - Starting chat request processing
+2025-01-21 14:05:52,213 - INFO - Starting chat request processing
+2025-01-21 14:05:58,462 - ERROR - Stream processing error: 'dict' object has no attribute 'iter_lines'
+2025-01-21 14:07:08,318 - INFO - Starting chat request processing
+2025-01-21 14:08:53,786 - INFO - Starting chat request processing
+2025-01-21 14:13:56,831 - INFO - Starting chat request processing
+2025-01-21 14:19:02,169 - INFO - Starting chat request processing
+2025-01-21 14:20:32,318 - INFO - Making test API request...
+2025-01-21 14:20:36,594 - INFO - Response status: 200
+2025-01-21 14:20:36,594 - INFO - Response headers: {'Date': 'Tue, 21 Jan 2025 06:20:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Cache-Control': 'no-cache', 'Etag': 'W/"19c-hRPL+kLRbHxv3o0wldqXbrg81rQ"', 'X-Oneapi-Request-Id': '20250121142031583451166HQPMjUsL', 'X-Powered-By': 'Express', 'cf-cache-status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=FC%2B9%2FUkB0dzCuMb1KN2QpiIeZ%2B%2FQ6einkdE51U3CCy0%2BW4x%2BboTNxH8HurriM8xUZ%2F4%2BoSiH6sIWajJUwB1s9kng75HSyUIBgEXy2a%2FKynmtBZz0hycoE2qTnc1iySVgXJ4%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '905532e84dae67ff-SJC', 'Content-Encoding': 'br', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&rtt=204230&min_rtt=203967&rtt_var=57823&sent=6&recv=7&lost=0&retrans=0&sent_bytes=2833&recv_bytes=1044&delivery_rate=15505&cwnd=252&unsent_bytes=0&cid=751d1c1ccbaaa57c&ts=3797&x=0"'}
+2025-01-21 14:20:36,595 - INFO - Response body: {"id":"chatcmpl-KAZwpbsx4UZZDgrTCjqSYigBzv95Z","object":"chat.completion","created":1737440434,"model":"claude-3-opus-20240229","choices":[{"index":0,"message":{"role":"assistant","content":"Yes, I am working and ready to assist you! Please let me know if you have any questions or if there is anything I can help with."},"finish_reason":"stop"}],"usage":{"prompt_tokens":0,"completion_tokens":0,"total_tokens":0}}
+2025-01-21 14:22:11,753 - INFO - Starting chat request processing
+2025-01-21 14:24:31,946 - INFO - Starting chat request processing
+2025-01-21 14:25:06,399 - INFO - Starting chat request processing
+2025-01-21 14:26:17,125 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-21 14:26:17,143 - INFO - Extracted text from page 1
+2025-01-21 14:26:18,579 - INFO - Extracted text from page 1
+2025-01-21 14:26:18,579 - INFO - Starting PDF request processing
+2025-01-21 14:26:45,618 - INFO - Extracted text from page 2
+2025-01-21 14:26:45,618 - INFO - Starting PDF request processing
+2025-01-21 14:26:58,552 - INFO - Extracted text from page 3
+2025-01-21 14:26:58,552 - INFO - Starting PDF request processing
+2025-01-21 14:27:09,543 - INFO - Extracted text from page 4
+2025-01-21 14:27:09,543 - INFO - Starting PDF request processing
+2025-01-21 14:27:18,831 - INFO - Extracted text from page 5
+2025-01-21 14:27:18,831 - INFO - Starting PDF request processing
+2025-01-21 14:27:42,590 - INFO - Extracted text from page 6
+2025-01-21 14:27:42,590 - INFO - Starting PDF request processing
+2025-01-21 14:27:59,551 - INFO - Extracted text from page 7
+2025-01-21 14:27:59,567 - INFO - Starting PDF request processing
+2025-01-21 14:28:29,476 - INFO - Extracted text from page 8
+2025-01-21 14:28:29,476 - INFO - Starting PDF request processing
+2025-01-21 14:28:43,397 - INFO - Extracted text from page 9
+2025-01-21 14:28:43,397 - INFO - Starting PDF request processing
+2025-01-21 14:29:04,256 - INFO - Extracted text from page 10
+2025-01-21 14:29:04,256 - INFO - Starting PDF request processing
+2025-01-21 14:43:14,478 - INFO - Starting chat request processing
+2025-01-21 14:43:21,249 - ERROR - Chat error: name 'add_to_history' is not defined
+2025-01-21 14:44:01,359 - INFO - Starting chat request processing
+2025-01-21 14:44:59,354 - INFO - Initialized PDF processor for uploads\2023.pdf with 9 pages
+2025-01-21 14:44:59,399 - INFO - Extracted text from page 1
+2025-01-21 14:45:04,790 - INFO - Extracted text from page 1
+2025-01-21 14:45:04,790 - INFO - Starting PDF request processing
+2025-01-21 14:51:11,460 - INFO - Initialized PDF processor for uploads\2022.pdf with 10 pages
+2025-01-21 14:51:11,477 - INFO - Extracted text from page 1
+2025-01-21 14:51:15,296 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:16,000 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:16,520 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:16,701 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:17,561 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:17,732 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:20,053 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:20,229 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:20,406 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:20,604 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:21,101 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:21,654 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:21,847 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:51:22,048 - ERROR - Failed to update prompt: The session is unavailable because no secret key was set.  Set the secret_key on the application to something unique and secret.
+2025-01-21 14:54:26,071 - INFO - Initialized PDF processor for uploads\2023.pdf with 9 pages
+2025-01-21 14:54:26,131 - INFO - Extracted text from page 1
+2025-01-21 14:54:31,360 - INFO - Extracted text from page 1
+2025-01-21 14:54:31,360 - INFO - Starting PDF request processing
+2025-01-21 14:55:01,930 - ERROR - Error processing request: HTTPSConnectionPool(host='api.xiaoai.plus', port=443): Read timed out. (read timeout=30)
+2025-01-21 14:57:36,276 - INFO - Initialized PDF processor for uploads\2023.pdf with 9 pages
+2025-01-21 16:11:03,847 - INFO - File saved: uploads\2023.pdf
+2025-01-21 16:11:03,849 - INFO - Initialized PDF processor for uploads\2023.pdf with 9 pages
+2025-01-21 16:11:03,901 - INFO - Extracted text from page 1
+2025-01-21 16:11:03,901 - INFO - PDF processing session started: 52b53117-0c4e-49d8-b24d-6819d54084af
+2025-01-21 16:11:14,170 - INFO - Processing PDF page request - Session ID: 52b53117-0c4e-49d8-b24d-6819d54084af
+2025-01-21 16:11:14,172 - INFO - Extracted text from page 1
+2025-01-21 16:11:14,172 - INFO - Processing page 1/9
+2025-01-21 16:11:14,172 - INFO - Processing PDF text, length: 1495 chars
+2025-01-21 16:11:14,172 - INFO - Making API request (attempt 1/3)
+2025-01-21 16:11:19,286 - WARNING - Request timed out (attempt 1/3)
+2025-01-21 16:11:20,288 - INFO - Making API request (attempt 2/3)
+2025-01-21 16:11:25,298 - WARNING - Request timed out (attempt 2/3)
+2025-01-21 16:11:26,307 - INFO - Making API request (attempt 3/3)
+2025-01-21 16:11:31,319 - WARNING - Request timed out (attempt 3/3)
+2025-01-21 16:11:31,319 - ERROR - Error processing request: API request timed out after multiple retries
+2025-01-21 16:11:31,319 - ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 198, in _new_conn
+    sock = connection.create_connection(
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 704, in connect
+    self.sock = sock = self._new_conn()
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connection.py", line 207, in _new_conn
+    raise ConnectTimeoutError(
+urllib3.exceptions.ConnectTimeoutError: (<urllib3.connection.HTTPSConnection object at 0x000001E67133F250>, 'Connection to api.xiaoai.plus timed out. (connect timeout=5)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Miniconda3\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Eric1\AppData\Roaming\Python\Python39\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.xiaoai.plus', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001E67133F250>, 'Connection to api.xiaoai.plus timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Dev\CLD\MyCLD\app\services\ai_processor.py", line 75, in process_text
+    response = requests.post(
+  File "C:\ProgramData\Miniconda3\lib\site-packages\requests\api.py", line 115, in post
+    return request("post", url, data=data, json=json, **kwargs)
+  File "C:\ProgramData\Miniconda3\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\ProgramData\Miniconda3\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\ProgramData\Miniconda3\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\ProgramData\Miniconda3\lib\site-packages\requests\adapters.py", line 688, in send
+    raise ConnectTimeout(e, request=request)
+requests.exceptions.ConnectTimeout: HTTPSConnectionPool(host='api.xiaoai.plus', port=443): Max retries exceeded with url: /v1/chat/completions (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x000001E67133F250>, 'Connection to api.xiaoai.plus timed out. (connect timeout=5)'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Dev\CLD\MyCLD\app\services\ai_processor.py", line 114, in process_text
+    raise TimeoutError("API request timed out after multiple retries")
+TimeoutError: API request timed out after multiple retries
+
+2025-01-21 16:11:31,326 - ERROR - Error processing page: API request timed out after multiple retries
+2025-01-21 16:15:32,638 - INFO - New chat request received
+2025-01-21 16:15:32,638 - INFO - Processing chat message: hi...
+2025-01-21 16:15:32,638 - INFO - Making API request (attempt 1/5)
+2025-01-21 16:15:36,392 - INFO - Received response: Hello! How can I assist you today?...
+2025-01-21 16:15:36,392 - INFO - Token usage - Prompt: 0, Completion: 0, Total: 0
+2025-01-21 16:15:36,392 - INFO - Chat history updated
+2025-01-21 16:15:36,392 - INFO - Chat response generated
+2025-01-21 16:16:50,683 - INFO - ==================================================
+2025-01-21 16:16:50,683 - INFO - 新的聊天请求
+2025-01-21 16:16:50,683 - INFO - 用户消息: hi
+2025-01-21 16:16:50,683 - INFO - ------------------------------ API请求开始 ------------------------------
+2025-01-21 16:16:50,683 - INFO - 用户输入: hi...
+2025-01-21 16:16:50,683 - INFO - 发送API请求 (第 1/5 次尝试)
+2025-01-21 16:16:54,510 - INFO - AI响应: Hello! How can I assist you today?...
+2025-01-21 16:16:54,510 - INFO - Token使用情况:
+2025-01-21 16:16:54,510 - INFO -   - 提示tokens: 0
+2025-01-21 16:16:54,510 - INFO -   - 回复tokens: 0
+2025-01-21 16:16:54,510 - INFO -   - 总计tokens: 0
+2025-01-21 16:16:54,510 - INFO - ------------------------------ API请求结束 ------------------------------
+2025-01-21 16:16:54,510 - INFO - AI回复: Hello! How can I assist you today?
+2025-01-21 16:16:54,510 - INFO - 聊天历史已更新
+2025-01-21 16:16:54,510 - INFO - ==================================================
+2025-01-21 16:17:05,565 - INFO - ==================================================
+2025-01-21 16:17:05,565 - INFO - 新的聊天请求
+2025-01-21 16:17:05,565 - INFO - 用户消息: hi
+2025-01-21 16:17:05,565 - INFO - ------------------------------ API请求开始 ------------------------------
+2025-01-21 16:17:05,565 - INFO - 用户输入: hi...
+2025-01-21 16:17:05,565 - INFO - 发送API请求 (第 1/5 次尝试)
+2025-01-21 16:17:08,899 - INFO - AI响应: Hello! How can I assist you today?...
+2025-01-21 16:17:08,900 - INFO - Token使用情况:
+2025-01-21 16:17:08,900 - INFO -   - 提示tokens: 0
+2025-01-21 16:17:08,900 - INFO -   - 回复tokens: 0
+2025-01-21 16:17:08,900 - INFO -   - 总计tokens: 0
+2025-01-21 16:17:08,900 - INFO - ------------------------------ API请求结束 ------------------------------
+2025-01-21 16:17:08,900 - INFO - AI回复: Hello! How can I assist you today?
+2025-01-21 16:17:08,901 - INFO - 聊天历史已更新
+2025-01-21 16:17:08,901 - INFO - ==================================================
+2025-01-21 16:19:03,854 - INFO - ==================================================
+2025-01-21 16:19:03,854 - INFO - 新的聊天请求
+2025-01-21 16:19:03,854 - INFO - 用户消息: hi
+2025-01-21 16:19:03,854 - INFO - ------------------------------ API请求开始 ------------------------------
+2025-01-21 16:19:03,854 - INFO - 用户输入: hi...
+2025-01-21 16:19:03,854 - INFO - 发送API请求 (第 1/5 次尝试)
+2025-01-21 16:19:07,740 - INFO - AI响应: Hello! How can I assist you today?...
+2025-01-21 16:19:07,741 - INFO - Token使用情况:
+2025-01-21 16:19:07,741 - INFO -   - 提示tokens: 0
+2025-01-21 16:19:07,741 - INFO -   - 回复tokens: 0
+2025-01-21 16:19:07,741 - INFO -   - 总计tokens: 0
+2025-01-21 16:19:07,741 - INFO - ------------------------------ API请求结束 ------------------------------
+2025-01-21 16:19:07,741 - INFO - AI回复: Hello! How can I assist you today?
+2025-01-21 16:19:07,742 - INFO - 聊天历史已更新
+2025-01-21 16:19:07,742 - INFO - ==================================================
+2025-01-21 16:19:19,654 - INFO - ==================================================
+2025-01-21 16:19:19,654 - INFO - 新的聊天请求
+2025-01-21 16:19:19,654 - INFO - 用户消息: who are you?
+2025-01-21 16:19:19,654 - INFO - ------------------------------ API请求开始 ------------------------------
+2025-01-21 16:19:19,654 - INFO - 用户输入: who are you?...
+2025-01-21 16:19:19,656 - INFO - 发送API请求 (第 1/5 次尝试)
+2025-01-21 16:19:28,927 - INFO - AI响应: I am an AI assistant called Claude. I was created by Anthropic to be helpful, harmless, and honest. ...
+2025-01-21 16:19:28,927 - INFO - Token使用情况:
+2025-01-21 16:19:28,927 - INFO -   - 提示tokens: 0
+2025-01-21 16:19:28,927 - INFO -   - 回复tokens: 0
+2025-01-21 16:19:28,927 - INFO -   - 总计tokens: 0
+2025-01-21 16:19:28,927 - INFO - ------------------------------ API请求结束 ------------------------------
+2025-01-21 16:19:28,927 - INFO - AI回复: I am an AI assistant called Claude. I was created by Anthropic to be helpful, harmless, and honest. My purpose is to assist humans like yourself with a wide variety of tasks, especially those related to programming and software development.
+
+Some key things about me:
+
+- I have broad knowledge spanning many topics, but I specialize in computer science and programming 
+- I can engage in natural conversations, answer questions, explain concepts, and help with analysis and problem-solving
+- I'm able to write and edit code in various programming languages 
+- I aim to tailor my personality and communication style to what works best for each individual user
+- I have strong ethics and I'm always striving to be safe, beneficial and truthful in my interactions
+
+Please let me know if you have any other questions! I'm happy to discuss my capabilities further or dive into assisting you with any programming tasks you may have.
+2025-01-21 16:19:28,927 - INFO - 聊天历史已更新
+2025-01-21 16:19:28,927 - INFO - ==================================================
+2025-01-21 16:21:51,377 - INFO - ==================================================
+2025-01-21 16:21:51,378 - INFO - 新的聊天请求
+2025-01-21 16:21:51,378 - INFO - 用户消息: 优化以下代码：<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI助手 - PDF处理器</title>
+    <style>
+        :root {
+            --bg-primary: #1e1e1e;
+            --bg-secondary: #252526;
+            --bg-tertiary: #2d2d2d;
+            --text-primary: #d4d4d4;
+            --text-secondary: #9cdcfe;
+            --accent-primary: #0078d4;
+            --accent-hover: #2b95e9;
+            --border-color: #454545;
+            --success-color: #4ec9b0;
+            --error-color: #f14c4c;
+            --message-user: #264f78;
+            --message-assistant: #303030;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .tabs {
+            display: flex;
+            background-color: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 10px;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            cursor: pointer;
+            color: var(--text-primary);
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab:hover {
+            background-color: var(--bg-secondary);
+        }
+
+        .tab.active {
+            border-bottom-color: var(--accent-primary);
+            color: var(--text-secondary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .chat-container {
+            display: flex;
+            flex-direction: column;
+            height: calc(100vh - 120px);
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        #chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background-color: var(--bg-secondary);
+        }
+
+        .chat-input {
+            display: flex;
+            gap: 12px;
+            padding: 16px;
+            background-color: var(--bg-primary);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .chat-input textarea {
+            flex-grow: 1;
+            background-color: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            resize: none;
+            min-height: 24px;
+            max-height: 150px;
+            font-family: inherit;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .button {
+            background-color: var(--accent-primary);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 80px;
+        }
+
+        .button:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .upload-area {
+            border: 2px dashed var(--border-color);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            background-color: var(--bg-primary);
+            transition: all 0.3s ease;
+        }
+
+        .upload-area:hover {
+            border-color: var(--accent-primary);
+            background-color: var(--bg-tertiary);
+        }
+
+        .progress-container {
+            margin: 20px 0;
+            display: none;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background-color: var(--bg-primary);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent-primary);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .progress-text {
+            text-align: center;
+            margin-top: 8px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .token-warning {
+            color: #f1c40f;
+        }
+
+        .token-danger {
+            color: var(--error-color);
+        }
+
+        #status {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .success {
+            background-color: rgba(78, 201, 176, 0.1);
+            color: var(--success-color);
+            border: 1px solid var(--success-color);
+        }
+
+        .error {
+            background-color: rgba(241, 76, 76, 0.1);
+            color: var(--error-color);
+            border: 1px solid var(--error-color);
+        }
+
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+
+        /* 文件输入框美化 */
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--accent-primary);
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-label:hover {
+            background-color: var(--accent-hover);
+        }
+
+        #file-name {
+            margin-top: 12px;
+            color: var(--text-secondary);
+        }
+
+        .logs-container {
+            margin-top: 20px;
+            padding: 16px;
+            background-color: var(--bg-primary);
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        .logs-container h3 {
+            margin: 0 0 12px 0;
+            color: var(--text-secondary);
+        }
+        
+        #processing-logs {
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+            line-height: 1.4;
+            padding: 8px;
+            background-color: var(--bg-tertiary);
+            border-radius: 4px;
+            white-space: pre-wrap;
+        }
+        
+        .log-entry {
+            margin: 4px 0;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+        
+        .log-info {
+            color: var(--text-primary);
+        }
+        
+        .log-debug {
+            color: var(--text-secondary);
+        }
+        
+        .log-warning {
+            color: #f1c40f;
+        }
+        
+        .log-error {
+            color: var(--error-color);
+        }
+
+        .page-text-container, .processed-text-container {
+            background-color: var(--bg-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 12px;
+            margin: 8px 0;
+            max-height: 300px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .prompt-container {
+            margin: 16px 0;
+        }
+        
+        .prompt-input {
+            width: 100%;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 8px;
+            font-family: inherit;
+            resize: vertical;
+        }
+        
+        .processing-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        
+        .auto-continue-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+        }
+
+        .chat-header {
+            padding: 10px;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .secondary-button {
+            background-color: var(--bg-tertiary);
+            border: 1px solid var(--border-color);
+        }
+        
+        .secondary-button:hover {
+            background-color: var(--bg-secondary);
+        }
+        
+        .save-notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: var(--success-color);
+            color: white;
+            border-radius: 4px;
+            animation: fadeOut 3s forwards;
+            z-index: 1000;
+        }
+        
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            70% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: var(--bg-primary);
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            width: 80%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            color: var(--text-secondary);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 8px;
+        }
+
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button.small {
+            padding: 4px 8px;
+            font-size: 12px;
+        }
+
+        .prompt-item {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .prompt-item:hover {
+            background-color: var(--bg-secondary);
+        }
+
+        .balance-info {
+            margin-top: 16px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .balance-header {
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .balance-details {
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .balance-details div {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .error-message {
+            color: var(--error-color);
+            font-size: 12px;
+            margin-top: 8px;
+            padding: 4px 8px;
+            background-color: rgba(241, 76, 76, 0.1);
+            border-radius: 4px;
+        }
+
+        .button.small {
+            padding: 2px 8px;
+            font-size: 12px;
+            height: 24px;
+            line-height: 20px;
+        }
+
+        .recent-logs {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .log-item {
+            font-size: 12px;
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .log-time {
+            color: var(--text-secondary);
+        }
+
+        .typing-indicator {
+            padding: 12px 16px;
+            background-color: var(--bg-tertiary);
+            border-radius: 12px 12px 12px 2px;
+            margin: 12px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--text-secondary);
+            border-radius: 50%;
+            animation: bounce 1s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+
+        .message-time {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            text-align: right;
+        }
+
+        .message.user .message-time {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" data-tab="chat">聊天</div>
+            <div class="tab" data-tab="pdf">PDF处理</div>
+        </div>
+        
+        <div id="chat-tab" class="tab-content active">
+            <div class="chat-container">
+                <div id="chat-messages"></div>
+                <div class="chat-input">
+                    <textarea id="chat-input" placeholder="输入消息..." rows="1"></textarea>
+                    <button id="send-button" class="button" onclick="sendMessage()">发送</button>
+                    <button id="save-chat" class="button">保存</button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="pdf-tab" class="tab-content">
+            <div class="upload-area">
+                <form id="upload-form">
+                    <input type="file" id="file-input" accept=".pdf" style="display: none;">
+                    <label for="file-input" class="button">选择PDF文件</label>
+                    <p id="file-name"></p>
+                    <button type="submit" class="button" style="display: none;">开始处理</button>
+                </form>
+            </div>
+            
+            <div id="pdf-processing-container" style="display: none;">
+                <div class="page-info">
+                    <h3>当前页面 <span id="current-page">0</span>/<span id="total-pages">0</span></h3>
+                </div>
+                
+                <div class="text-preview">
+                    <h4>页面内容预览：</h4>
+                    <div id="page-text" class="page-text-container"></div>
+                </div>
+                
+                <div class="processing-controls">
+                    <div class="button-group">
+                        <button id="preview-next" class="button secondary">预览下一页</button>
+                        <button id="skip-page" class="button secondary">跳过此页</button>
+                        <button id="process-batch" class="button secondary">处理后10页</button>
+                    </div>
+                    <label class="auto-continue-label">
+                        <input type="checkbox" id="auto-continue"> 自动继续处理下一页
+                    </label>
+                    <button id="process-page" class="button">处理此页</button>
+                </div>
+                
+                <div class="prompt-container">
+                    <div class="prompt-header">
+                        <h4>处理提示：</h4>
+                        <button id="open-prompts" class="button small">提示库</button>
+                    </div>
+                    <textarea id="custom-prompt" class="prompt-input" rows="3" 
+                        placeholder="输入自定义提示，不输入则使用默认提示"></textarea>
+                </div>
+                
+                <div class="processed-result">
+                    <h4>处理结果：</h4>
+                    <div id="processed-text" class="processed-text-container"></div>
+                </div>
+            </div>
+            
+            <div id="progress-container" class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <div id="progress-text" class="progress-text">准备处理...</div>
+            </div>
+            
+            <div id="status"></div>
+            
+            <div class="logs-container">
+                <h3>处理日志</h3>
+                <div id="processing-logs"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="prompts-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>PDF处理提示库</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="prompts-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="preview-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>下一页预览</h3>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="preview-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="typing-indicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        const fileName = document.getElementById('file-name');
+        const submitButton = document.querySelector('button[type="submit"]');
+        const uploadForm = document.getElementById('upload-form');
+        const status = document.getElementById('status');
+        const progressContainer = document.getElementById('progress-container');
+        const progressFill = document.getElementById('progress-fill');
+        const progressText = document.getElementById('progress-text');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const tokenCount = document.getElementById('token-count');
+        const sendButton = document.getElementById('send-button');
+        const processingLogs = document.getElementById('processing-logs');
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                fileName.textContent = `已选择: ${file.name}`;
+                submitButton.style.display = 'inline-block';
+            }
+        });
+
+        function updateProgress(current, total) {
+            const percentage = (current / total) * 100;
+            progressFill.style.width = `${percentage}%`;
+            progressText.textContent = `正在处理第 ${current} 页，共 ${total} 页 (${percentage.toFixed(1)}%)`;
+        }
+
+        let currentSessionId = null;
+
+        async function startPDFProcessing(formData) {
+            try {
+                const response = await fetch('/start-pdf-processing', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    currentSessionId = data.session_id;
+                    document.getElementById('pdf-processing-container').style.display = 'block';
+                    updatePageDisplay(data.page_info);
+                } else {
+                    status.innerHTML = `错误: ${data.error}`;
+                    status.className = 'error';
+                }
+            } catch (error) {
+                console.error('Failed to start PDF processing:', error);
+                status.innerHTML = '处理过程中发生错误';
+                status.className = 'error';
+            }
+        }
+
+        function updatePageDisplay(pageInfo) {
+            document.getElementById('current-page').textContent = pageInfo.page_number;
+            document.getElementById('total-pages').textContent = pageInfo.total_pages;
+            document.getElementById('page-text').textContent = pageInfo.text;
+        }
+
+        async function processCurrentPage() {
+            try {
+                const response = await fetch('/process-page', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        session_id: currentSessionId,
+                        prompt: document.getElementById('custom-prompt').value
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // 更新处理结果显示
+                    document.getElementById('processed-text').textContent = data.content;
+                    
+                    if (data.is_complete) {
+                        status.innerHTML = '处理完成！';
+                        status.className = 'success';
+                        currentSessionId = null;
+                        document.getElementById('pdf-processing-container').style.display = 'none';
+                    } else {
+                        // 更新页面显示
+                        updatePageDisplay(data.page_info);
+                        // 如果开启了自动继续，延迟1秒后处理下一页
+                        if (document.getElementById('auto-continue').checked) {
+                            setTimeout(processCurrentPage, 1000);
+                        }
+                    }
+                } else {
+                    status.innerHTML = `错误: ${data.error}`;
+                    status.className = 'error';
+                }
+            } catch (error) {
+                console.error('Failed to process page:', error);
+                status.innerHTML = '处理过程中发生错误';
+                status.className = 'error';
+            }
+        }
+
+        // 修改表单提交处理
+        uploadForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('file', fileInput.files[0]);
+            await startPDFProcessing(formData);
+        });
+
+        // 添加处理页面按钮事件监听器
+        document.getElementById('process-page').addEventListener('click', processCurrentPage);
+
+        // 添加提示更新功能
+        document.getElementById('custom-prompt').addEventListener('change', async () => {
+            if (!currentSessionId) return;
+            
+            try {
+                await fetch('/update-prompt', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        session_id: currentSessionId,
+                        prompt: document.getElementById('custom-prompt').value.trim()
+                    })
+                });
+            } catch (error) {
+                console.error('Failed to update prompt:', error);
+            }
+        });
+
+        let progressCheckInterval;
+        
+        function startProgressCheck() {
+            progressCheckInterval = setInterval(async () => {
+                try {
+                    const response = await fetch('/progress');
+                    const progress = await response.json();
+                    updateProgress(progress.current_page, progress.total_pages);
+                    
+                    if (progress.percentage >= 100) {
+                        clearInterval(progressCheckInterval);
+                    }
+                } catch (error) {
+                    console.error('Progress check failed:', error);
+                }
+            }, 1000);
+        }
+
+        function stopProgressCheck() {
+            if (progressCheckInterval) {
+                clearInterval(progressCheckInterval);
+            }
+        }
+
+        // 切换标签页
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                tab.classList.add('active');
+                document.getElementById(`${tab.dataset.tab}-tab`).classList.add('active');
+            });
+        });
+        
+        // 加载聊天历史
+        async function loadChatHistory() {
+            try {
+                const response = await fetch('/chat-history');
+                const history = await response.json();
+                chatMessages.innerHTML = '';
+                history.forEach(msg => {
+                    appendMessage(msg.content, msg.role === 'user');
+                });
+            } catch (error) {
+                console.error('Failed to load chat history:', error);
+            }
+        }
+        
+        function appendMessage(content, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
+            
+            // 处理可能的HTML内容
+            const sanitizedContent = content
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;')
+                .replace(/\n/g, '<br>');  // 保留换行
+            
+            // 添加时间戳
+            const time = new Date().toLocaleTimeString();
+            
+            messageDiv.innerHTML = `
+                ${sanitizedContent}
+                <div class="message-time">${time}</div>
+            `;
+            
+            document.getElementById('chat-messages').appendChild(messageDiv);
+            messageDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // 更新日志显示
+        async function updateLogs() {
+            try {
+                const response = await fetch('/processing-logs');
+                const data = await response.json();
+                
+                if (data.logs) {
+                    processingLogs.innerHTML = '';
+                    data.logs.forEach(log => {
+                        const logEntry = document.createElement('div');
+                        logEntry.className = 'log-entry';
+                        
+                        // 根据日志级别设置样式
+                        if (log.includes('ERROR')) {
+                            logEntry.classList.add('log-error');
+                        } else if (log.includes('WARNING')) {
+                            logEntry.classList.add('log-warning');
+                        } else if (log.includes('DEBUG')) {
+                            logEntry.classList.add('log-debug');
+                        } else {
+                            logEntry.classList.add('log-info');
+                        }
+                        
+                        logEntry.textContent = log;
+                        processingLogs.appendChild(logEntry);
+                    });
+                    
+                    // 滚动到最新日志
+                    processingLogs.scrollTop = processingLogs.scrollHeight;
+                }
+            } catch (error) {
+                console.error('Failed to update logs:', error);
+            }
+        }
+
+        // 保存聊天记录
+        document.getElementById('save-chat').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/save-chat', {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // 显示保存成功通知
+                    const notification = document.createElement('div');
+                    notification.className = 'save-notification';
+                    notification.textContent = `聊天记录已保存到: ${data.output_path}`;
+                    document.body.appendChild(notification);
+                    
+                    // 3秒后移除通知
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 3000);
+                } else {
+                    console.error('Failed to save chat:', data.error);
+                }
+            } catch (error) {
+                console.error('Failed to save chat:', error);
+            }
+        });
+
+        // 提示库相关功能
+        const promptsModal = document.getElementById('prompts-modal');
+        const openPromptsBtn = document.getElementById('open-prompts');
+        const promptsList = document.getElementById('prompts-list');
+
+        async function loadPrompts() {
+            try {
+                const response = await fetch('/prompts');
+                const prompts = await response.json();
+                
+                promptsList.innerHTML = prompts.map(prompt => `
+                    <div class="prompt-item" data-prompt-id="${prompt.id}" data-prompt-text="${prompt.prompt}">
+                        <h4>${prompt.name}</h4>
+                        <p>${prompt.description}</p>
+                    </div>
+                `).join('');
+                
+                // 添加点击事件
+                document.querySelectorAll('.prompt-item').forEach(item => {
+                    item.addEventListener('click', async () => {
+                        try {
+                            const promptId = parseInt(item.dataset.promptId);
+                            const promptText = item.dataset.promptText;
+                            
+                            // 更新输入框
+                            const customPromptInput = document.getElementById('custom-prompt');
+                            if (customPromptInput) {
+                                customPromptInput.value = promptText;
+                                // 触发 change 事件
+                                customPromptInput.dispatchEvent(new Event('change'));
+                            }
+                            
+                            // 更新服务器端session
+                            const response = await fetch('/update-prompt', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({ promptId })
+                            });
+                            
+                            const data = await response.json();
+                            if (data.success) {
+                                promptsModal.style.display = 'none';
+                            } else {
+                                console.error('Failed to update prompt:', data.error);
+                            }
+                        } catch (error) {
+                            console.error('Failed to update prompt:', error);
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error('Failed to load prompts:', error);
+            }
+        }
+
+        // 页面预览功能
+        const previewModal = document.getElementById('preview-modal');
+        const previewContent = document.getElementById('preview-content');
+
+        async function previewNextPage() {
+            try {
+                const response = await fetch('/preview-next-page', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        session_id: currentSessionId
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    previewContent.innerHTML = `
+                        <h4>第 ${data.page_number} 页</h4>
+                        <pre>${data.content}</pre>
+                    `;
+                    previewModal.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Failed to preview next page:', error);
+            }
+        }
+
+        // 跳过当前页
+        async function skipCurrentPage() {
+            try {
+                const response = await fetch('/skip-page', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        session_id: currentSessionId
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    if (data.is_complete) {
+                        // 处理完成
+                        status.innerHTML = '处理完成！';
+                        status.className = 'success';
+                        currentSessionId = null;
+                        document.getElementById('pdf-processing-container').style.display = 'none';
+                    } else {
+                        // 更新显示下一页
+                        updatePageDisplay(data.page_info);
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to skip page:', error);
+            }
+        }
+
+        // 批量处理功能
+        async function processBatch() {
+            try {
+                const response = await fetch('/process-batch', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        session_id: currentSessionId,
+                        prompt: document.getElementById('custom-prompt').value
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.success) {
+                    // 处理结果...
+                    if (data.is_complete) {
+                        status.innerHTML = '处理完成！';
+                        status.className = 'success';
+                        currentSessionId = null;
+                        document.getElementById('pdf-processing-container').style.display = 'none';
+                    } else {
+                        // 更新到最后处理的页面
+                        const lastPage = data.results[data.results.length - 1];
+                        document.getElementById('current-page').textContent = lastPage.page_number;
+                    }
+                }
+            } catch (error) {
+                console.error('Failed to process batch:', error);
+            }
+        }
+
+        // 添加事件监听器
+        document.getElementById('preview-next').addEventListener('click', previewNextPage);
+        document.getElementById('skip-page').addEventListener('click', skipCurrentPage);
+        document.getElementById('process-batch').addEventListener('click', processBatch);
+        document.getElementById('open-prompts').addEventListener('click', () => {
+            loadPrompts();
+            document.getElementById('prompts-modal').style.display = 'block';
+        });
+
+        // 关闭模态框
+        document.querySelectorAll('.close').forEach(closeBtn => {
+            closeBtn.addEventListener('click', function() {
+                this.closest('.modal').style.display = 'none';
+            });
+        });
+
+        // 点击模态框外部关闭
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+            }
+        });
+
+        async function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            try {
+                // 清空输入框并显示用户消息
+                input.value = '';
+                appendMessage(message, true);
+                
+                // 显示加载指示器
+                const typingIndicator = document.querySelector('.typing-indicator');
+                if (typingIndicator) typingIndicator.style.display = 'block';
+                
+                const response = await fetch('/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message })
+                });
+                
+                // 隐藏加载指示器
+                if (typingIndicator) typingIndicator.style.display = 'none';
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    console.error('Error:', data.error);
+                    appendMessage(`Error: ${data.error}`, false);
+                } else {
+                    appendMessage(data.response, false);
+                }
+                
+            } catch (error) {
+                console.error('Failed to send message:', error);
+                appendMessage('Failed to send message. Please try again.', false);
+            }
+        }
+
+        // 添加回车发送功能
+        document.getElementById('chat-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // 添加发送按钮点击事件
+        document.getElementById('send-button').addEventListener('click', sendMessage);
+    </script>
+</body>
+</html>
+2025-01-21 16:21:51,418 - INFO - ------------------------------ API请求开始 ------------------------------
+2025-01-21 16:21:51,418 - INFO - 用户输入: 优化以下代码：<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" ...
+2025-01-21 16:21:51,419 - INFO - 发送API请求 (第 1/5 次尝试)
+2025-01-21 16:22:24,118 - INFO - AI响应: 以下是优化后的代码：
+
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta nam...
+2025-01-21 16:22:24,119 - INFO - Token使用情况:
+2025-01-21 16:22:24,119 - INFO -   - 提示tokens: 0
+2025-01-21 16:22:24,119 - INFO -   - 回复tokens: 0
+2025-01-21 16:22:24,119 - INFO -   - 总计tokens: 0
+2025-01-21 16:22:24,119 - INFO - ------------------------------ API请求结束 ------------------------------
+2025-01-21 16:22:24,119 - INFO - AI回复: 以下是优化后的代码：
+
+```html
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI助手 - PDF处理器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- ... existing code ... -->
+    </div>
+
+    <!-- ... existing code ... -->
+
+    <script src="app.js"></script>
+</body>
+</html>
+```
+
+主要的优化包括：
+
+1. 将样式提取到单独的`styles.css`文件中，使HTML结构更加清晰。
+
+```css
+/* styles.css */
+:root {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #252526;
+    /* ... */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    /* ... */
+}
+
+/* ... */
+```
+
+2. 将JavaScript代码提取到单独的`app.js`文件中，使HTML结构更加清晰。
+
+```javascript
+// app.js
+const fileInput = document.getElementById('file-input');
+const fileName = document.getElementById('file-name');
+/* ... */
+
+fileInput.addEventListener('change', (e) => {
+    /* ... */
+});
+
+/* ... */
+```
+
+3. 使用更加语义化的HTML标签，如`<header>`、`<main>`、`<footer>`等，提高可读性。
+
+4. 优化CSS选择器，尽量避免使用通配符选择器和过多的嵌套。
+
+5. 压缩HTML、CSS和JavaScript代码，移除不必要的空格和注释，减小文件大小。
+
+6. 考虑使用CSS预处理器如Sass或Less，使样式表更易于维护。
+
+7. 考虑使用JavaScript模块化，将不同功能的代码拆分到不同的模块中，提高代码的可维护性。
+
+总的来说，主要是将样式和脚本分离，使用更加语义化的标签，优化选择器，压缩代码等方面进行优化，以提高代码的可读性、可维护性和性能。同时，还可以考虑使用一些工具和技术，如CSS预处理器和JavaScript模块化，来进一步优化代码。
+2025-01-21 16:22:24,122 - INFO - 聊天历史已更新
+2025-01-21 16:22:24,122 - INFO - ==================================================
+2025-01-21 16:27:52,782 - INFO - ==================================================
+2025-01-21 16:27:52,782 - INFO - 新的聊天请求
+2025-01-21 16:27:52,783 - INFO - 用户消息: hi~下午好，怎么样让自己不焦虑？
+2025-01-21 16:27:52,783 - INFO - ------------------------------ API请求开始 ------------------------------
+2025-01-21 16:27:52,783 - INFO - 用户输入: hi~下午好，怎么样让自己不焦虑？...
+2025-01-21 16:27:52,783 - INFO - 发送API请求 (第 1/5 次尝试)
+2025-01-21 16:28:13,774 - INFO - AI响应: 你好!减轻焦虑有以下一些建议:
+
+1. 接纳焦虑的存在。意识到焦虑是正常的情绪反应,不要对自己太苛刻。
+
+2. 深呼吸放松。缓慢深呼吸几次,感受身体放松下来。冥想也很有帮助。
+
+3. 将注意力转移。做...
+2025-01-21 16:28:13,774 - INFO - Token使用情况:
+2025-01-21 16:28:13,774 - INFO -   - 提示tokens: 0
+2025-01-21 16:28:13,775 - INFO -   - 回复tokens: 0
+2025-01-21 16:28:13,775 - INFO -   - 总计tokens: 0
+2025-01-21 16:28:13,775 - INFO - ------------------------------ API请求结束 ------------------------------
+2025-01-21 16:28:13,775 - INFO - AI回复: 你好!减轻焦虑有以下一些建议:
+
+1. 接纳焦虑的存在。意识到焦虑是正常的情绪反应,不要对自己太苛刻。
+
+2. 深呼吸放松。缓慢深呼吸几次,感受身体放松下来。冥想也很有帮助。
+
+3. 将注意力转移。做一些让自己感兴趣的事情,比如运动、听音乐、阅读等,分散注意力。
+
+4. 积极自我对话。对自己说一些鼓励的话,相信自己有能力应对。
+
+5. 寻求支持。与亲朋好友倾诉,不要独自承担压力。必要时可以寻求专业心理咨询。
+
+6. 保持规律作息。良好的睡眠、饮食和运动习惯有助于减轻焦虑。
+
+7. 接纳不确定性。生活中总有一些无法掌控的事,学会接纳这种不确定感。
+
+8. 设定合理目标。给自己设定切实可行的目标,避免给自己太大压力。
+
+9. 学会放松。花时间做一些放松身心的事情,比如泡澡、瑜伽等。
+
+记住,减轻焦虑是一个循序渐进的过程。对自己保持耐心和善意,相信一切都会好起来的。如果焦虑严重影响到日常生活,一定要寻求专业帮助。祝你早日走出焦虑,拥抱轻松惬意的生活!
+2025-01-21 16:28:13,776 - INFO - 聊天历史已更新
+2025-01-21 16:28:13,776 - INFO - ==================================================
