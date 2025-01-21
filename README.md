@@ -58,7 +58,7 @@
 1. 克隆项目
 
 ```bash
-git clone [repository_url]
+git clone https://github.com/EricWang1358/CLD_Student_Specified
 ```
 
 2. 安装依赖
@@ -93,14 +93,6 @@ python run.py
 2. 输入问题
 3. 获取 AI 回复
 4. 保存对话记录
-
-## 项目特点
-
-1. 模块化设计
-2. 完整的错误处理
-3. 详细的日志记录
-4. 灵活的提示词系统
-5. 友好的用户界面
 
 ## 注意事项
 
