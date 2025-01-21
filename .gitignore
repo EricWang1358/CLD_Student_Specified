@@ -1,4 +1,4 @@
-# Python
+# Python编译文件和缓存
 __pycache__/
 *.py[cod]
 *$py.class
@@ -21,18 +21,18 @@ wheels/
 .installed.cfg
 *.egg
 
-# Virtual Environment
+# 虚拟环境
 venv/
 ENV/
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+# IDE配置文件
+.idea/          # PyCharm
+.vscode/        # Visual Studio Code
+*.swp          # Vim
+*.swo          # Vim
 
-# Project specific
-uploads/
-outputs/
-*.log
-.env 
+# 项目特定文件
+uploads/        # PDF上传目录
+outputs/        # 处理结果目录
+*.log          # 日志文件
+.env           # 环境变量文件（包含敏感信息） 
