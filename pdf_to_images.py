@@ -90,20 +90,30 @@ class PDFToImages:
             
             # 创建指定范围的页面和页码的元组列表
             pages = [(i, doc[i]) for i in range(start_idx, end_idx + 1)]
+            total = len(pages)
             
-            # 使用线程池并行处理
-            with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                # 使用tqdm显示进度条
-                results = list(tqdm(
-                    executor.map(self.convert_page, pages),
-                    total=len(pages),
-                    desc="转换进度"
-                ))
+            with tqdm(total=total, desc="转换进度") as pbar:
+                with ThreadPoolExecutor(max_workers=max_workers) as executor:
+                    # 创建Future对象列表
+                    futures = []
+                    for page_args in pages:
+                        future = executor.submit(self.convert_page, page_args)
+                        future.add_done_callback(lambda p: pbar.update(1))
+                        futures.append(future)
+                    
+                    # 等待所有任务完成
+                    results = []
+                    for future in futures:
+                        try:
+                            result = future.result()
+                            results.append(result)
+                        except Exception as e:
+                            logger.error(f"转换失败: {str(e)}")
+                            results.append(False)
             
             # 统计结果
             success_count = sum(results)
-            total_converted = len(pages)
-            logger.info(f"转换完成: 成功 {success_count} 页, 失败 {total_converted - success_count} 页")
+            logger.info(f"转换完成: 成功 {success_count} 页, 失败 {total - success_count} 页")
             logger.info(f"输出目录: {self.output_dir}")
             
         except Exception as e:

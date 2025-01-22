@@ -14,18 +14,40 @@ def select_pdf_file():
     # 获取当前目录下的所有PDF文件
     pdf_files = list(Path('.').glob('**/*.pdf'))
     
+    # 添加手动输入选项
+    choices = ['手动输入路径...'] + [str(f) for f in pdf_files]
+    
     if not pdf_files:
-        console.print("[red]当前目录及子目录下没有找到PDF文件！[/red]")
-        return None
-        
+        console.print("[yellow]当前目录及子目录下没有找到PDF文件！[/yellow]")
+        console.print("[green]请手动输入PDF文件路径[/green]")
+    
     questions = [
         inquirer.List('file',
                      message="选择要处理的PDF文件",
-                     choices=[str(f) for f in pdf_files])
+                     choices=choices)
     ]
     
     answers = inquirer.prompt(questions)
-    return answers['file'] if answers else None
+    if not answers:
+        return None
+        
+    selected = answers['file']
+    
+    # 如果选择手动输入
+    if selected == '手动输入路径...':
+        path_question = [
+            inquirer.Text('path',
+                         message="请输入PDF文件的完整路径",
+                         validate=lambda _, x: Path(x).exists() and Path(x).suffix.lower() == '.pdf')
+        ]
+        
+        path_answer = inquirer.prompt(path_question)
+        if not path_answer:
+            return None
+            
+        return path_answer['path']
+        
+    return selected
 
 def get_page_range(total_pages):
     """获取页面范围"""
@@ -56,7 +78,7 @@ def get_output_settings():
     questions = [
         inquirer.Text('output',
                      message="输入输出目录 (留空使用默认)",
-                     default=''),
+                     default='output'),
         inquirer.List('dpi',
                      message="选择输出图片DPI",
                      choices=['150', '300', '600'],

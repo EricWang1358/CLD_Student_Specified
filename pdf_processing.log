@@ -323,3 +323,7 @@
 2025-01-22 14:39:48,805 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
 2025-01-22 14:39:48,811 - INFO - Extracted text from page 1
 2025-01-22 14:39:48,811 - INFO - PDF processing session started: bd36ee84-7814-41b9-902a-5cf8a43a5107
+2025-01-22 15:10:39,782 - INFO - File saved: uploads\Testing_Basics_Cont.pdf
+2025-01-22 15:10:39,787 - INFO - Initialized PDF processor for uploads\Testing_Basics_Cont.pdf with 151 pages
+2025-01-22 15:10:39,788 - INFO - Extracted text from page 1
+2025-01-22 15:10:39,788 - INFO - PDF processing session started: 709d13ee-04cf-4cdf-8da5-3bbb7538828d
