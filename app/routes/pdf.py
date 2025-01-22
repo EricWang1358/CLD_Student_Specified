@@ -207,13 +207,6 @@ def process_page():
 
 ## 处理结果
 {response['content']}
-
-## 处理信息
-- 处理时间: {response['timestamp']}
-- Token使用:
-  - 提示tokens: {response['usage'].get('prompt_tokens', 0)}
-  - 回复tokens: {response['usage'].get('completion_tokens', 0)}
-  - 总计tokens: {response['usage'].get('total_tokens', 0)}
 """)
                 
             logger.info(f"Saved processing results to {output_dir}")
@@ -302,6 +295,122 @@ def process_batch():
     except Exception as e:
         logger.error(f"Error in batch processing: {str(e)}")
         logger.error(f"Traceback: {traceback.format_exc()}")
+        return jsonify({'error': str(e)}), 500
+
+@pdf_bp.route('/jump-to-page', methods=['POST'])
+def jump_to_page():
+    """跳转到指定页面"""
+    try:
+        data = request.get_json()
+        session_id = data.get('session_id')
+        page_number = data.get('page_number')
+        
+        if not session_id or session_id not in pdf_sessions:
+            return jsonify({'error': 'Invalid session ID'}), 400
+            
+        session = pdf_sessions[session_id]
+        processor = session['processor']
+        
+        # 检查页码是否有效
+        if not page_number or page_number < 1 or page_number > processor.total_pages:
+            return jsonify({'error': 'Invalid page number'}), 400
+            
+        # 更新当前页码
+        processor.current_page = page_number - 1
+        page_info = processor.get_next_page()
+        
+        return jsonify({
+            'success': True,
+            'page_info': page_info
+        })
+        
+    except Exception as e:
+        logger.error(f"Error jumping to page: {str(e)}")
+        return jsonify({'error': str(e)}), 500
+
+@pdf_bp.route('/process-range', methods=['POST'])
+def process_range():
+    """处理指定范围的页面"""
+    try:
+        data = request.get_json()
+        session_id = data.get('session_id')
+        start_page = data.get('start_page')
+        end_page = data.get('end_page')
+        custom_prompt = data.get('prompt')
+        
+        if not session_id or session_id not in pdf_sessions:
+            return jsonify({'error': 'Invalid session ID'}), 400
+            
+        session = pdf_sessions[session_id]
+        processor = session['processor']
+        
+        # 检查页码范围是否有效
+        if not start_page or not end_page or start_page < 1 or end_page > processor.total_pages or start_page > end_page:
+            return jsonify({'error': 'Invalid page range'}), 400
+            
+        # 跳转到起始页
+        processor.current_page = start_page - 1
+        
+        results = []  # 存储处理结果
+        output_files = []  # 存储输出文件路径
+        
+        # 处理指定范围的页面
+        while processor.current_page < end_page:
+            page_info = processor.get_next_page()
+            if not page_info:
+                break
+                
+            # 处理当前页
+            ai_processor = AIProcessor()
+            response = ai_processor.process_text(page_info['text'], custom_prompt)
+            
+            if 'error' in response:
+                logger.error(f"Error processing page {processor.current_page + 1}: {response['error']}")
+                continue
+                
+            # 保存处理结果
+            try:
+                output_dir = os.path.join(current_app.config['UPLOAD_FOLDER'], 'outputs', session_id)
+                os.makedirs(output_dir, exist_ok=True)
+                
+                # 保存Markdown格式结果
+                md_file = os.path.join(output_dir, f"page_{processor.current_page + 1}.md")
+                with open(md_file, 'w', encoding='utf-8') as f:
+                    f.write(f"""# 第 {processor.current_page + 1} 页处理结果
+
+## 使用的提示
+```
+{custom_prompt}
+```
+
+## 处理结果
+{response['content']}
+""")
+                
+                # 记录结果和文件路径
+                results.append({
+                    'page_number': processor.current_page + 1,
+                    'content': response['content'],
+                    'file_path': md_file
+                })
+                output_files.append(md_file)
+                
+                logger.info(f"Saved processing results for page {processor.current_page + 1}")
+                
+            except Exception as e:
+                logger.error(f"Failed to save processing result: {str(e)}")
+                
+            processor.current_page += 1
+            
+        return jsonify({
+            'success': True,
+            'is_complete': processor.current_page >= end_page,
+            'results': results,
+            'output_files': output_files
+        })
+        
+    except Exception as e:
+        logger.error(f"Error processing range: {str(e)}")
         return jsonify({'error': str(e)}), 500
 
 # ... 其他PDF相关路由 ... 
