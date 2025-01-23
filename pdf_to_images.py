@@ -4,6 +4,7 @@ from pathlib import Path
 import logging
 from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
+import threading
 
 # 配置日志
 logging.basicConfig(
@@ -32,10 +33,18 @@ class PDFToImages:
         if output_dir:
             self.output_dir = Path(output_dir)
         else:
-            self.output_dir = self.pdf_path.parent / self.pdf_path.stem
+            # 处理PDF文件名中的空格，创建一个安全的目录名
+            safe_stem = self.pdf_path.stem.replace(' ', '_')
+            self.output_dir = self.pdf_path.parent / safe_stem
             
+        # 确保输出目录是绝对路径
+        self.output_dir = self.output_dir.absolute()
+        
+        # 创建输出目录（如果不存在）
         self.output_dir.mkdir(parents=True, exist_ok=True)
         self.dpi = dpi
+        
+        logger.info(f"输出目录已创建: {self.output_dir}")
         
     def convert_page(self, args):
         """
@@ -48,8 +57,25 @@ class PDFToImages:
         try:
             # 转换为PNG
             pix = page.get_pixmap(matrix=fitz.Matrix(self.dpi/72, self.dpi/72))
-            output_path = self.output_dir / f"page_{page_num + 1}.png"
-            pix.save(str(output_path))
+            
+            # 处理输出路径，确保目录存在且处理空格问题
+            page_dir = os.path.dirname(str(self.output_dir))
+            if not os.path.exists(page_dir):
+                os.makedirs(page_dir, exist_ok=True)
+            
+            # 处理文件名中的空格和特殊字符
+            output_filename = f"page_{page_num + 1}.png"
+            output_path = os.path.join(str(self.output_dir), output_filename)
+            
+            # 确保输出目录存在
+            os.makedirs(os.path.dirname(output_path), exist_ok=True)
+            
+            # 使用绝对路径并处理空格
+            abs_output_path = os.path.abspath(output_path)
+            pix.save(abs_output_path)
+            
+            # 将日志输出到文件而不是控制台
+            logger.debug(f"成功转换第 {page_num + 1} 页到: {abs_output_path}")
             return True
         except Exception as e:
             logger.error(f"转换第 {page_num + 1} 页时出错: {str(e)}")
@@ -92,13 +118,28 @@ class PDFToImages:
             pages = [(i, doc[i]) for i in range(start_idx, end_idx + 1)]
             total = len(pages)
             
-            with tqdm(total=total, desc="转换进度") as pbar:
+            # 创建进度条
+            pbar = tqdm(total=total, desc="转换进度", ncols=100)
+            
+            # 创建线程安全的计数器
+            completed = 0
+            lock = threading.Lock()
+            
+            def update_progress(future):
+                """回调函数：更新进度条"""
+                nonlocal completed
+                with lock:
+                    completed += 1
+                    pbar.update(1)
+            
+            try:
+                # 使用线程池并行处理
                 with ThreadPoolExecutor(max_workers=max_workers) as executor:
-                    # 创建Future对象列表
+                    # 提交所有任务并添加回调
                     futures = []
                     for page_args in pages:
                         future = executor.submit(self.convert_page, page_args)
-                        future.add_done_callback(lambda p: pbar.update(1))
+                        future.add_done_callback(update_progress)
                         futures.append(future)
                     
                     # 等待所有任务完成
@@ -110,6 +151,9 @@ class PDFToImages:
                         except Exception as e:
                             logger.error(f"转换失败: {str(e)}")
                             results.append(False)
+            
+            finally:
+                pbar.close()
             
             # 统计结果
             success_count = sum(results)

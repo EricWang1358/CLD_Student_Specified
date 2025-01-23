@@ -53,19 +53,22 @@ def get_page_range(total_pages):
     """获取页面范围"""
     questions = [
         inquirer.Text('start',
-                     message=f"输入起始页码 (1-{total_pages})",
-                     validate=lambda _, x: x.isdigit() and 1 <= int(x) <= total_pages),
+                     message=f"输入起始页码 (1-{total_pages}, 回车默认为1)",
+                     validate=lambda _, x: x == '' or (x.isdigit() and 1 <= int(x) <= total_pages),
+                     default=''),
         inquirer.Text('end',
-                     message=f"输入结束页码 (1-{total_pages})",
-                     validate=lambda _, x: x.isdigit() and 1 <= int(x) <= total_pages)
+                     message=f"输入结束页码 (1-{total_pages}, 回车默认为{total_pages})",
+                     validate=lambda _, x: x == '' or (x.isdigit() and 1 <= int(x) <= total_pages),
+                     default='')
     ]
     
     answers = inquirer.prompt(questions)
     if not answers:
         return None, None
         
-    start = int(answers['start'])
-    end = int(answers['end'])
+    # 处理默认值
+    start = int(answers['start']) if answers['start'] else 1
+    end = int(answers['end']) if answers['end'] else total_pages
     
     if start > end:
         console.print("[red]起始页码不能大于结束页码！[/red]")
@@ -78,7 +81,7 @@ def get_output_settings():
     questions = [
         inquirer.Text('output',
                      message="输入输出目录 (留空使用默认)",
-                     default='output'),
+                     default=''),
         inquirer.List('dpi',
                      message="选择输出图片DPI",
                      choices=['150', '300', '600'],
